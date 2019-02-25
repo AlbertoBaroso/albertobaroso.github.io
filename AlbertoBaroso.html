@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+
+        <title>Alberto Baroso</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="Style/Reset.css" />
+        <link rel="stylesheet" type="text/css" href="Style/Grid.css" />
+        <link rel="stylesheet" type="text/css" href="Style/AlbertoBaroso.css" />
+        <link rel="icon" type="image/png" href="Images/AB-Icon.png" />
+
+        <meta name="description" content="Alberto Baroso | Programmatore Software, Sviluppatore Web Front End e Back End" />
+        <meta name="keywords" content="alberto,baroso,frontend,backend,developer,software,programmatore" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Alberto Baroso" />
+        <meta charset="utf-8" />
+
+    </head>
+    <body>
+        <nav class="navbar" id="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="logo"></div>
+                        <div class="toggle-nav" id="navbar-toggle">
+                            <span class="toggle-icon"></span>
+                        </div>
+                        <ul class="nav-links" id="nav-links">
+                            <li class="nav-link" data-target="aboutme"> <a>Introduzione</a> </li>
+                            <li class="nav-link" data-target="knowledge"> <a>Conoscenze</a> </li>
+                            <li class="nav-link" data-target="skills"> <a>Competenze</a> </li>
+                            <li class="nav-link" data-target="history"> <a>Storia</a> </li>
+                            <li class="nav-link" data-target="contacts"> <a>Contatti</a> </li>
+                            <!-- <li class="nav-link" data-target="projects"> <a>Projects</a> </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container ita">
+            <header class="row" id="aboutme-section">
+                <div class="col-12 header v-center">
+                    <div class="row">
+                        <div class="col-12 header-text animate" id="header-text">
+                            <h1 class="title-line mt-4">Ciao. Mi Chiamo</h1>
+                            <h1 class="title-line">Alberto Baroso</h1>
+                            <h1 class="title-line"><span class="long-text">E lavoro come </span><span class="short-text">E mi piace lavorare come </span><span class="my-profession" id="profession"></span></h1>
+                        </div>
+                        <div class="col-12 text-center">
+                            <a class="change-language animate" href="index.html">ENGLISH VERSION</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="row" id="knowledge-section">
+                <div class="col-12">
+                    <h2 class="section-title animate mb-4">Conoscenze</h2>
+                </div>
+                <div class="col-12 col-md-6 languages-container text-center animate">
+                    <h3 class="languages-category">Sviluppo Web</h3>
+                    <div class="language-row">
+                        <span class="language-name">HTML</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-start="2015"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <span class="language-name">CSS</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-start="2015"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <span class="language-name">PHP</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-start="2016"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <span class="language-name">JS</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-start="2016"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <span class="language-name">SQL</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-years="3"></span>Anni di esperienza</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 languages-container text-center animate">
+                    <h3 class="languages-category">Programmazione</h3>
+                    <div class="language-row">
+                        <span class="language-name">JAVA</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-start="2016"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <span class="language-name">C/C++</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-years="3"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <span class="language-name">VBA</span>
+                        <div class="language-level"></div>
+                        <p class="experience-text"><span class="experience" data-years="2"></span>Anni di esperienza</p>
+                    </div>
+                    <div class="language-row">
+                        <p class="experience-text">Altri linguaggi che ho già usato: Phyton, Assembly 80/86</p>
+                    </div>
+                </div>
+            </section>
+            <section class="row" id="skills-section">
+                <div class="col-12">
+                    <h2 class="section-title animate mb-4">Competenze</h2>
+                    <div class="row section-content my-skills animate">
+                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="arduino">
+                            <img class="skill-icon" alt="Arduino and Raspberry" src="Images/Arduino.svg" />
+                            <span class="skill-name">Arduino &amp; Raspberry</span>
+                        </div>
+                        <div class="col-12 d-block d-sm-none skill-descriptions">
+                            <p class="skill-description" data-skill="arduino">Mi piace realizzare progetti usando Arduino or Raspebrry, uno dei migliori (che ho realizzato con un amico) è stato un robot a 2 ruote comandato a distanza usando uno smartphone</p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="responsive">
+                            <img class="skill-icon" alt="Responsive Design" src="Images/Responsive.svg" />
+                            <span class="skill-name">Responsive Design</span>
+                        </div>
+                        <div class="col-12 d-none d-sm-block d-md-none skill-descriptions">
+                            <p class="skill-description" data-skill="arduino">Mi piace realizzare progetti usando Arduino or Raspebrry, uno dei migliori (che ho realizzato con un amico) è stato un robot a 2 ruote comandato a distanza usando uno smartphone</p>
+                            <p class="skill-description" data-skill="responsive">In un mondo in cui telefoni e tablet sono usati quotidianamente, i siti non possono non essere responsive perciò io sviluppo i siti sempre concentrandomi sul concetto di mobile-first</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none skill-descriptions">
+                            <p class="skill-description" data-skill="responsive">In un mondo in cui telefoni e tablet sono usati quotidianamente, i siti non possono non essere responsive perciò io sviluppo i siti sempre concentrandomi sul concetto di mobile-first</p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="editing">
+                            <img class="skill-icon" alt="Video Editing" src="Images/Editing.svg" />
+                            <span class="skill-name">Photo/Video Editing</span>
+                        </div>
+                        <div class="col-12 d-none d-md-block skill-descriptions">
+                            <p class="skill-description" data-skill="arduino">Mi piace realizzare progetti usando Arduino or Raspebrry, uno dei migliori (che ho realizzato con un amico) è stato un robot a 2 ruote comandato a distanza usando uno smartphone</p>
+                            <p class="skill-description" data-skill="responsive">In un mondo in cui telefoni e tablet sono usati quotidianamente, i siti non possono non essere responsive perciò io sviluppo i siti sempre concentrandomi sul concetto di mobile-first</p>
+                            <p class="skill-description" data-skill="editing">So modificare foto e immagini usando programmi come GIMP o Adobe Photoshop e so modificare video usando Adobe Premiere Pro</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none skill-descriptions">
+                            <p class="skill-description" data-skill="editing">So modificare foto e immagini usando programmi come GIMP o Adobe Photoshop e so modificare video usando Adobe Premiere Pro</p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="networking">
+                            <img class="skill-icon" alt="Network" src="Images/Networking.svg" />
+                            <span class="skill-name">Computer networks</span>
+                        </div>
+                        <div class="col-12 d-none d-sm-block d-md-none skill-descriptions">
+                            <p class="skill-description" data-skill="editing">So modificare foto e immagini usando programmi come GIMP o Adobe Photoshop e so modificare video usando Adobe Premiere Pro</p>
+                            <p class="skill-description" data-skill="networking">So come progettare piccole reti di computer anche implementando misure di sicurezza preventive</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none skill-descriptions">
+                            <p class="skill-description" data-skill="networking">So come progettare piccole reti di computer anche implementando misure di sicurezza preventive</p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="seo">
+                            <img class="skill-icon" alt="SEO Marketing" src="Images/SEO.svg" />
+                            <span class="skill-name">Search Engine Optimization</span>
+                        </div>
+                        <div class="col-12 d-block d-sm-none skill-descriptions">
+                            <p class="skill-description" data-skill="seo">Non svilupperei mai un sito se non volessi che venisse trovato, il SEO è un aspetto fondamentale che tengo sempre in mente quando sviluppo siti internet</p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="teamwork">
+                            <img class="skill-icon" alt="Teamwork" src="Images/Teamwork.svg" />
+                            <span class="skill-name">Teamwork</span>
+                        </div>
+                        <div class="col-12 d-none d-md-block skill-descriptions">
+                            <p class="skill-description" data-skill="networking">So come progettare piccole reti di computer anche implementando misure di sicurezza preventive</p>
+                            <p class="skill-description" data-skill="seo">Non svilupperei mai un sito se non volessi che venisse trovato, il SEO è un aspetto fondamentale che tengo sempre in mente quando sviluppo siti internet</p>
+                            <p class="skill-description" data-skill="teamwork">Mi piace lavorare in gruppo e cerco sempre di dare il meglio di me per raggiungere gli obiettivi</p>
+                        </div>
+                        <div class="col-12 d-none d-sm-block d-md-none skill-descriptions">
+                            <p class="skill-description" data-skill="seo">Non svilupperei mai un sito se non volessi che venisse trovato, il SEO è un aspetto fondamentale che tengo sempre in mente quando sviluppo siti internet</p>
+                            <p class="skill-description" data-skill="teamwork">Mi piace lavorare in gruppo e cerco sempre di dare il meglio di me per raggiungere gli obiettivi</p>
+                        </div>
+                        <div class="col-12 d-block d-sm-none skill-descriptions">
+                            <p class="skill-description" data-skill="teamwork">Mi piace lavorare in gruppo e cerco sempre di dare il meglio di me per raggiungere gli obiettivi</p>
+                        </div>
+                    </div>
+                    <h2 class="section-title animate mb-4">Lingue</h2>
+                    <div class="row mb-4 text-center section-content">
+                        <div class="col-12 col-sm-4 lang-container animate">
+                            <img class="country-flag shadow" src="Images/Italy.png" alt="Italian flag" />
+                            <h5 class="lang-name" id="lang-it">Italiano</h5>
+                            <h3 class="language-skill">C2</h3>
+                        </div>
+                        <div class="col-12 col-sm-4 lang-container animate">
+                            <img class="country-flag shadow" src="Images/GreatBritain.png" alt="Great Britain flag" />
+                            <h5 class="lang-name" id="lang-en">Inglese</h5>
+                            <h3 class="language-skill">B2</h3>
+                        </div>
+                        <div class="col-12 col-sm-4 lang-container animate">
+                            <img class="country-flag shadow" src="Images/Spain.png" alt="Spanish flag" />
+                            <h5 class="lang-name" id="lang-es">Spagnolo</h5>
+                            <h3 class="language-skill">A2</h3>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <a class="framework-link animate" target="new" href="http://europass.cedefop.europa.eu/resources/european-language-levels-cefr">Quadro comune europeo di riferimento per le lingue
+                                <img src="Images/External.png" class="external-icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row v-center" id="history-section">
+                <div class="col-12">
+                    <h2 class="section-title animate mb-4">La Mia Storia</h2>
+                    <div class="events animate">
+                        <label class="today">Oggi</label>
+                        <div class="event">
+                            <label class="event-date">Attualmente</label>
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <h3 class="event-title">Università di Torino</h3>
+                                <label class="event-description">Sto studiando scienze del Computer all'Università degli Studi di Torino</label>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <label class="event-date">10/06/2018</label>
+                            <div class="event-marker"></div>
+                            <div class="event-content">
+                                <h3 class="event-title">Diploma in Informatica</h3>
+                                <label class="event-description">Mi sono diplomato in informatica all' ITIS A. Artom di Asti</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row v-center" id="contacts-section">
+                <div class="col-12">
+                    <h2 class="section-title animate mb-4">Contattami</h2>
+                    <div class="col-12 col-md-8 offset-md-2">
+                        <div class="contact-container animate">
+                            <h4 class="mt-4 contact-title">E-mail</h4>
+                            <span class="mb-4 contact-info">albertobaroso999@gmail.com</span>
+                        </div>
+                        <div class="text-sm-right contact-container animate">
+                            <h4 class="mt-4 contact-title">Numero di Telefono</h4>
+                            <span class="mb-4 contact-info">+39 392 5281597</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer animate">
+            <button id="top-button" class="top-button waves-effect waves-effect show" type="button">
+                <span class="chevron"></span>
+            </button>
+            <div class="container text-center text-md-left">
+                <div class="row mt-3">
+                    <div class="my-5 my-md-0 col-md-3 col-lg-4 col-xl-3 mx-auto v-center">
+                        <img src="Images/AB-Logo.png" class="footer-logo" />
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="footer-title" data-target="links">Link</h6>
+                        <a class="footer-link" data-target="aboutme">Introduzione</a>
+                        <a class="footer-link" data-target="knowledge">Conoscenze</a>
+                        <a class="footer-link" data-target="skills">Competenze</a>
+                        <a class="footer-link" data-target="history">Storia</a>
+                        <a class="footer-link" data-target="contacts">Contatti</a>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="footer-title">Icone</h6>
+                        <p class="footer-attribution mt-4">Icone realizzate da <a href="https://smashicons.com/" target="_blank" class="explicit-link">Smashicons</a> prese da <a href="https://www.flaticon.com" target="_blank" class="explicit-link">Flaticon</a></p>
+                    </div>
+                    <div class="my-3 my-md-0 col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 v-center">
+                        <a href="https://www.instagram.com/albertobaroso/" target="_blank">
+                            <img src="Images/Instagram.png" class="instagram-logo" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-end text-center py-3">Alberto Baroso</div>
+        </footer>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="Scripts/Jquery-Colors.js"></script>
+    <script src="Scripts/AlbertoBaroso.js"></script>
+
+</html>

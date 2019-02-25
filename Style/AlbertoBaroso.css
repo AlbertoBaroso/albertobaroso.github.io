@@ -1,0 +1,979 @@
+/*/
+ *      General
+/*/
+
+body {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+    margin: 0;
+}
+
+.v-center {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+section {
+    min-height: 100vh;
+    padding: 4rem 0;
+}
+
+.section-title {
+    transition: opacity 1s 0.3s ease;
+    margin: 2rem 0 1rem 0;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 4rem;
+    opacity: 0;
+}
+
+.section-title:after {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: width 0.6s 1s ease;
+    background-color: #0254d2;
+    margin-top: -4px;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 0;
+}
+
+.section-title.show:after {
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-content {
+    margin: 3rem 0;
+}
+
+.chevron {
+    transform: translate(-50%, 0%) rotate(45deg);
+    border-left: 5px solid #333;
+    border-top: 5px solid #333;
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    left: 50%;
+    top: 4px;
+}
+
+/*/
+ *      Nav Bar
+/*/
+
+.navbar {
+    transition: box-shadow 0.3s ease;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    width: 100%;
+}
+
+.nav-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid #edf1f5;
+}
+
+.logo {
+    background-image: url("../Images/AB-Logo.png");
+    background-size: cover;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    height: 32px;
+    width: 51px;
+}
+
+.nav-links {
+    display: inline-block;
+    margin: 7px 0;
+    float: right;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.change-language:hover,
+.nav-link.active,
+.nav-link:hover,
+.my-profession {
+    color: #0254d2;
+}
+
+.nav-link.active:after {
+    width: 100%;
+}
+
+.nav-link:after {
+    transition: width 0.3s ease;
+    background-color: #055ade;
+    margin-top: 2px;
+    display: block;
+    height: 3px;
+    content: '';
+    width: 0;
+}
+
+.toggle-nav {
+    line-height: 25px;
+    cursor: pointer;
+    display: none;
+    height: 30px;
+}
+
+.toggle-nav .toggle-icon:before,
+.toggle-nav .toggle-icon:after,
+.toggle-nav .toggle-icon {
+    transition: all 0.25s linear;
+    background-color: #111;
+    height: 5px;
+    width: 30px;
+}
+
+.toggle-nav .toggle-icon:before,
+.toggle-nav .toggle-icon:after {
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+.toggle-nav .toggle-icon {
+    display: inline-block;
+}
+
+.toggle-nav .toggle-icon:before {
+    margin-top: -10px;
+}
+
+.toggle-nav .toggle-icon:after {
+    margin-top: 10px;
+}
+
+.navbar.show .toggle-nav .toggle-icon {
+    background-color: transparent;
+}
+
+.navbar.show .toggle-nav .toggle-icon:before {
+    transform: rotate(45deg);
+    margin-top: 0;
+}
+
+.navbar.show .toggle-nav .toggle-icon:after {
+    transform: rotate(-45deg);
+    margin-top: 0;
+}
+
+/*/
+ *      Header
+/*/
+
+.header {
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+}
+
+.header-text {
+    transition: opacity 0.8s 0.4s ease, margin-left 1.2s;
+    margin-left: -100%;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.header-text.show {
+    margin-left: 0;
+    opacity: 1;
+}
+
+.my-profession:after {
+    animation: 1s blink step-end infinite;
+    display: inline-block;
+    margin: 0 0 -3px 2px;
+    background: #0254d2;
+    height: 40px;
+    content: "";
+    width: 2px;
+}
+
+.change-language {
+    transition: opacity 0.5s 1.2s ease, color 0.3s ease ;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 5rem;
+    cursor: pointer;
+    color: #222;
+    opacity: 0;
+}
+
+.title-line:nth-of-type(1) {
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+.title-line:nth-of-type(2) {
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 4rem;
+    font-size: 4.2rem;
+    color: #0254d2;
+}
+
+.title-line:nth-of-type(3) {
+    margin: 10px 0 0 0;
+    font-size: 3rem;
+}
+
+.long-text {
+    display: none;
+}
+
+/*/
+ *      Knowledge Section
+/*/
+
+.languages-category {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #0254d2;
+    opacity: 0;
+}
+
+.language-row {
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-align: left;
+    max-width: 325px;
+    width: 100%;
+}
+
+.language-name {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2rem;
+    opacity: 0;
+    width: 110px;
+}
+
+.language-level {
+    display: inline-block;
+}
+
+.languages-container {
+    margin: 1rem 0;
+}
+
+.experience-text {
+    font-size: 1.2rem;
+    opacity: 0;
+}
+
+.experience-text .experience {
+    margin-right: 5px;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.diamond {
+    transition: background-color 0.4s 0.3s ease;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    border: 3px solid #0254d2;
+    transform: rotate(45deg);
+    display: inline-block;
+    margin: 2px 6px;
+    height: 18px;
+    width: 18px;
+    opacity: 0;
+}
+
+.diamond.active {
+    background-color: #0254d2;
+}
+
+/*/
+ *      Skills Section
+/*/
+
+.lang-container {
+    transition: opacity 0.6s ease;
+    opacity: 0;
+}
+
+.lang-container:nth-of-type(1) {
+    transition-delay: 1s;
+}
+
+.lang-container:nth-of-type(2) {
+    transition-delay: 1.3s;
+}
+
+.lang-container:nth-of-type(3) {
+    transition-delay: 1.6s;
+}
+
+.country-flag {
+    border-radius: 6px;
+    max-width: 256px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.lang-name {
+    font-variant: all-small-caps;
+    transition: color 0.3s ease;
+    margin: 1.5rem 0 1rem 0;
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 3rem;
+    color: #0254d2;
+}
+
+.language-skill {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.framework-link {
+    transition: color 0.3s ease, opacity 0.5s 1.8s ease;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #0254d2;
+    opacity: 0;
+}
+
+.framework-link:hover > .external-icon {
+    opacity: 1;
+}
+
+.framework-link:hover {
+    color: #0133b1;
+}
+
+.external-icon {
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+    width: 20px;
+}
+
+.my-skills {
+    transition: opacity 0.5s 1s ease;
+    opacity: 0;
+}
+
+.skill-icon {
+    margin: 0 auto 1rem auto;
+    max-width: 120px;
+    display: block;
+    width: 80%;
+}
+
+.skill-name {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.skill-container {
+    transition: opacity 0.3s ease;
+}
+
+.skill-container:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.skill-description {
+    margin-bottom: 3rem;
+    text-align: center;
+    display: none;
+}
+
+/*/
+ *      History Section
+/*/
+
+.events {
+    transition: opacity 0.8s 1.2s ease;
+    text-align: center;
+    position: relative;
+    margin: 2rem 1rem;
+    opacity: 0;
+}
+
+.events .today {
+    font-variant: small-caps;
+    text-align: center;
+    background: #111;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+    color: #fff;
+    width: 70px;
+}
+
+.events .event {
+    box-sizing: content-box;
+    position: relative;
+    padding-top: 2rem;
+    min-height: 110px;
+}
+
+.events .event:before {
+    position: absolute;
+    margin-left: -1px;
+    background: #111;
+    height: 100%;
+    content: "";
+    width: 2px;
+    left: 50%;
+    top: 0;
+}
+
+.events .event:last-of-type:before {
+    height: 40px;
+}
+
+.events .event:nth-child(odd) .event-content,
+.events .event:nth-child(even) .event-date {
+    text-align: left;
+    float: right;
+}
+
+.events .event:nth-child(even) .event-content,
+.events .event:nth-child(odd) .event-date {
+    text-align: right;
+    float: left;
+}
+
+.event .event-date {
+    font-weight: 500;
+    color: #111;
+    width: 48%;
+    margin: 0;
+}
+
+.event .event-description {
+    font-size: 1.2rem;
+}
+
+.event .event-content {
+    color: #333;
+    width: 48%;
+}
+
+.event-content .event-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.event .event-marker {
+    box-shadow: 0px 0px 0px 1px #fff;
+    transform: rotate(45deg);
+    display: inline-block;
+    background: #000;
+    min-height: 8px;
+    min-width: 8px;
+    z-index: 2;
+}
+
+/*/
+ *      Contacts Section
+/*/
+
+.contact-container {
+    opacity: 0;
+}
+
+.contact-container:nth-of-type(1) {
+    transition: opacity 0.8s 0.7s ease;
+}
+
+.contact-container:nth-of-type(2) {
+    transition: opacity 0.8s 1.3s ease;
+}
+
+.contact-title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.contact-info {
+    font-size: 1.5rem;
+}
+
+.text-sm-right {
+    text-align: right;
+}
+
+/*/
+ *      Footer
+/*/
+
+.footer {
+    transition: opacity 0.5s 0.5s ease;
+    position: relative;
+    color: #333;
+    opacity: 0;
+}
+
+.footer:before {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: width 0.6s 1.2s ease;
+    background-color: #0254d2;
+    margin-bottom: 3rem;
+    margin-top: -4px;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 100%;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.footer-logo {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.instagram-logo {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
+}
+
+.footer-link {
+    transition: color 0.3s ease;
+    margin-bottom: 2px;
+    cursor: pointer;
+    display: block;
+}
+
+.footer-link:hover {
+    color: #000;
+}
+
+.top-button {
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.4s ease;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    bottom: 50px;
+    height: 64px;
+    width: 64px;
+    outline: 0;
+    z-index: 5;
+    top: -29px;
+    right: 0;
+    left: 0;
+}
+
+.top-button:hover {
+    background-color: #dedede;
+}
+
+.explicit-link {
+    color: #111;
+}
+
+.footer-end {
+    font-weight: 700;
+    color: #222;
+}
+
+/*/
+ *      Fade In Animations
+/*/
+
+.contact-container.show,
+.change-language.show,
+.lang-container.show,
+.framework-link.show,
+.section-title.show,
+.my-skills.show,
+.footer.show,
+.events.show {
+    opacity: 1;
+}
+
+/*/
+ *      Media Queries
+/*/
+
+@media screen and (max-width: 991px) {
+
+    .title-line:nth-of-type(1) {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .title-line:nth-of-type(2) {
+        display: inline-block;
+        font-size: 2.92rem;
+        line-height: 3rem;
+    }
+
+    .title-line:nth-of-type(3) {
+        margin: 5px 0 0 0;
+        font-size: 2rem;
+    }
+
+    .my-profession:after {
+        height: 30px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    /*/ Nav Bar /*/
+
+    .navbar.show {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        border-bottom: 1px solid #edf1f5;
+    }
+
+    .navbar.show .nav-links {
+        max-height: 300px;
+        margin: 20px 0;
+    }
+
+    .nav-links {
+        transition: margin .5s ease, max-height .9s ease;
+        white-space: pre-line;
+        text-align: center;
+        overflow: hidden;
+        max-height: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .toggle-nav {
+        display: inline-block;
+        float: right;
+    }
+
+    /*/ Skills Section /*/
+
+    .lang-name {
+        font-size: 2.5rem;
+    }
+
+    .framework-link {
+        font-size: 1.5rem;
+    }
+
+    /*/ History Section /*/
+
+    .events {
+        margin: 2rem 0;
+    }
+
+    .events .event {
+        padding: 25px 0px 5px 35px;
+        text-align: left;
+    }
+
+    .events .event .event-marker {
+        position: absolute;
+        margin-top: 6px;
+        left: 31px;
+    }
+
+    .events .event:before {
+        left: 35px;
+    }
+
+    .events .event:last-of-type:before {
+        height: 30px;
+    }
+
+    .events .today {
+        margin: 0;
+    }
+
+    .events .event:nth-child(even) .event-content,
+    .events .event:nth-child(odd) .event-content,
+    .events .event:nth-child(even) .event-date,
+    .events .event:nth-child(odd) .event-date {
+        text-align: left;
+        margin: 0 20px;
+        float: none;
+    }
+
+    .events .event:nth-child(even) .event-content,
+    .events .event:nth-child(odd) .event-content {
+        width: calc(100% - 40px);
+    }
+
+    .events .event:nth-child(even) .event-content .event-title,
+    .events .event:nth-child(odd) .event-content .event-title {
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+
+    /*/ Knowledge Section /*/
+
+    .languages-category {
+        font-size: 2.25rem;
+    }
+
+    .language-row {
+        max-width: 256px;
+    }
+
+    .language-name {
+        font-size: 1.5rem;
+        width: 80px;
+    }
+
+    .language-level .diamond {
+        margin: 2px 5px;
+        height: 13px;
+        width: 13px;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+
+    /*/ General /*/
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /*/ About Me Section /*/
+
+    .header-text {
+        text-align: center;
+    }
+
+    .title-line:nth-of-type(1) {
+        font-size: 1.8rem;
+    }
+
+    .title-line:nth-of-type(2) {
+        line-height: 2.2rem;
+        font-size: 1.7rem;
+    }
+
+    .title-line:nth-of-type(3) {
+        min-height: 150px;
+        margin: 0;
+    }
+
+    .short-text {
+        display: none;
+    }
+
+    .long-text {
+        display: block;
+    }
+
+    .my-profession {
+        letter-spacing: -1px;
+        font-size: 1.7rem;
+    }
+
+    /*/ Knowledge Section /*/
+
+    .languages-category {
+        font-size: 2rem;
+    }
+
+    .language-row {
+        max-width: 288px;
+    }
+
+    .language-row .language-name {
+        font-size: 1.5rem;
+        width: 80px;
+    }
+
+    .language-level .diamond {
+        margin: 2px 6px;
+        height: 17px;
+        width: 17px;
+    }
+
+    .lang-container:nth-of-type(1),
+    .lang-container:nth-of-type(2),
+    .lang-container:nth-of-type(3) {
+        transition-delay: 0.5s;
+    }
+
+    .country-flag {
+        width: 40%;
+    }
+
+    /*/ Contact Section /*/
+
+    .contact-title {
+        font-size: 1.45rem;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+    }
+
+    .text-sm-right {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .my-profession {
+        font-size: 2.2rem;
+    }
+
+    .language-row {
+        max-width: 256px;
+    }
+
+    .language-level .diamond {
+        margin: 2px 5px;
+        height: 13px;
+        width: 13px;
+    }
+
+}
+
+/*/
+ *      Animations
+/*/
+
+@keyframes blink {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/*/
+ *      Italian Version changes
+/*/
+
+.ita .my-profession {
+    font-size: 0.98em;
+    display: block;
+}
+
+.ita .title-line:nth-of-type(1) {
+    font-size: 4.49em;
+}
+
+.ita .title-line:nth-of-type(2) {
+    font-size: 3.82em;
+}
+
+.ita .title-line:nth-of-type(3) {
+    font-size: 2.85em;
+}
+
+@media screen and (max-width: 991px) {
+
+    .ita .header {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+
+    .ita .header {
+        font-size: 0.6rem;
+    }
+
+    .ita .languages-category {
+        font-size: 1.8rem;
+    }
+
+    .ita .long-text {
+        display: none;
+    }
+
+    .ita .short-text {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .ita .header {
+        font-size: 0.45rem;
+    }
+
+    .ita .title-line:nth-of-type(3) {
+        font-size: 5.1em;
+    }
+
+    .ita .my-profession {
+        font-size: 0.86em;
+    }
+
+    .ita .short-text {
+        display: none;
+    }
+
+    .ita .long-text {
+        display: block;
+    }
+
+}
