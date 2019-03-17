@@ -33,7 +33,8 @@ $(function() {
 
         /*/ Stop animations on links /*/
         animateLinks = false;
-
+        $(this).stop(true);
+        
         /*/ Scroll animation to target /*/
         $("html, body").animate({
             scrollTop: $(`#${$(this).data("target")}-section`).offset().top
