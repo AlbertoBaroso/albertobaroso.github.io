@@ -3,7 +3,7 @@
 /*/
 
 body {
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.16);
     font-family: "Montserrat", sans-serif;
     background-color: #fff;
     margin: 0;
@@ -196,6 +196,7 @@ section {
 
 .header-text {
     transition: opacity 0.8s 0.4s ease, margin-left 1.2s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
     margin-left: -100%;
     font-weight: 700;
     opacity: 0;
