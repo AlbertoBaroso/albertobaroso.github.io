@@ -21,6 +21,7 @@ section {
 }
 
 .section-title {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
     transition: opacity 1s 0.3s ease;
     margin: 2rem 0 1rem 0;
     display: inline-block;
