@@ -9,6 +9,11 @@ $(function () {
         $("#main-nav").toggleClass("show");
     });
 
+    /*/ Open/Close Navigation Bar /*/
+    $("#active-lang").on("click", function () {
+        $("#more-langs").toggleClass("active");
+    });
+
     /*/ Check if page is already scrolled on load /*/
     checkScroll();
 

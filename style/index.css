@@ -128,7 +128,6 @@ section {
     cursor: pointer;
 }
 
-.change-language:hover,
 .nav-link.active,
 .nav-link:hover,
 .my-profession {
@@ -198,6 +197,35 @@ section {
     margin-top: 0;
 }
 
+.lang-selection {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    padding: 0 10px;
+    cursor: pointer;
+    float: right;
+    width: 70px;
+}
+
+.more-langs {
+    transition: max-height .6s ease, padding .6s ease;
+    position: absolute;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    max-height: 0;
+    padding: 0 10px;
+    width: 70px;
+    top: 52px;
+    left: 0;
+}
+
+.more-langs.active {
+    border: 1px solid #edf1f5;
+    max-height: 56px;
+    padding: 10px;
+}
+
 /*/
  *      Header
 /*/
@@ -228,18 +256,6 @@ section {
     height: 40px;
     content: "";
     width: 2px;
-}
-
-.change-language {
-    transition: opacity 0.5s 1.2s ease, color 0.3s ease ;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 5rem;
-    cursor: pointer;
-    color: #222;
-    opacity: 0;
 }
 
 .title-line:nth-of-type(1) {
@@ -364,6 +380,10 @@ section {
     display: block;
     margin: 0 auto;
     width: 100%;
+}
+
+.country-flag.small {
+    max-width: 50px;
 }
 
 .lang-name {
@@ -650,7 +670,6 @@ section {
 /*/
 
 .contact-container.show,
-.change-language.show,
 .lang-container.show,
 .framework-link.show,
 .section-title.show,
@@ -719,6 +738,28 @@ section {
     .toggle-nav {
         display: inline-block;
         float: right;
+    }
+
+    .navbar.show .lang-selection {
+        transition: margin .2s ease, max-height .2s ease;
+        max-height: 120px;
+        margin: 0 0 20px 0;
+    }
+
+    .lang-selection {
+        transition: margin .3s .3s ease, max-height .6s .3s ease;
+        overflow: hidden;
+        max-height: 0;
+        width: 100%;
+    }
+
+    .more-langs {
+        position: relative;
+    }
+
+    .more-langs.active {
+        margin: 0 auto;
+        top: 10px;
     }
 
     /*/ Skills Section /*/
