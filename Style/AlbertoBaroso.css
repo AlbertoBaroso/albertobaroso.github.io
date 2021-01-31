@@ -92,7 +92,7 @@ section {
 }
 
 .logo {
-    background-image: url("../Images/AB-Logo.png");
+    background-image: url("../Images/logo/AB-Logo.png");
     background-size: cover;
     display: inline-block;
     white-space: nowrap;
