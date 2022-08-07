@@ -1,18 +1,23 @@
 $(function () {
 
+    const moreLangs = document.getElementById('more-langs');
+    const languageSelector = document.getElementById('lang-selection');
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const mainNav = document.getElementById('main-nav');
+
     /*/
      *      Utility
     /*/
 
     /*/ Open/Close Navigation Bar /*/
-    $("#navbar-toggle").on("click", function () {
-        $("#main-nav").toggleClass("show");
-    });
+    navbarToggle.addEventListener('click',
+        () => mainNav.classList.toggle("show")
+    );
 
     /*/ Open/Close Navigation Bar /*/
-    $("#active-lang").on("click", function () {
-        $("#more-langs").toggleClass("active");
-    });
+    languageSelector.addEventListener('click',
+        () => moreLangs.classList.toggle('active')
+    );
 
     /*/ Check if page is already scrolled on load /*/
     checkScroll();
@@ -62,6 +67,15 @@ $(function () {
 
         return false;
 
+    });
+
+    moreLangs.addEventListener('click', async (e) => {
+        if(e.target && e.target.classList.contains('country-flag')) {
+            const locale = e.target.dataset["lang"];
+            await setLocale(locale);
+            moreLangs.classList.remove('active');
+            window.localStorage.setItem('lang', locale)
+        }
     });
 
 });

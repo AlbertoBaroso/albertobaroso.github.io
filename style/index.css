@@ -198,7 +198,6 @@ section {
 }
 
 .lang-selection {
-    display: inline-block;
     margin-right: 10px;
     position: relative;
     padding: 0 10px;
@@ -207,8 +206,17 @@ section {
     width: 70px;
 }
 
+.lang-selection-active {
+    align-items: center;
+    display: flex;
+}
+
+.lang-selection > :first-child {
+    padding-right: .5rem;
+}
+
 .more-langs {
-    transition: max-height .6s ease, padding .6s ease;
+    transition: max-height .35s ease-out, padding .35s ease-out, margin .35s ease-out;
     position: absolute;
     background: #fff;
     overflow: hidden;
@@ -223,7 +231,8 @@ section {
 .more-langs.active {
     border: 1px solid #edf1f5;
     max-height: 56px;
-    padding: 10px;
+    padding: 0.6rem;
+    width: 3.6rem;
 }
 
 /*/
@@ -383,7 +392,12 @@ section {
 }
 
 .country-flag.small {
-    max-width: 50px;
+    display: inline-block;
+    max-width: 2.3rem;
+}
+
+.fa-solid.fa-caret-down {
+    padding-left: .3rem;
 }
 
 .lang-name {
@@ -758,8 +772,9 @@ section {
     }
 
     .more-langs.active {
-        margin: 0 auto;
-        top: 10px;
+        margin: 10px auto;
+        left: -0.75rem;
+        top: 0px;
     }
 
     /*/ Skills Section /*/
@@ -818,6 +833,11 @@ section {
     .events .event:nth-child(even) .event-content .event-title,
     .events .event:nth-child(odd) .event-content .event-title {
         margin: 0;
+    }
+
+    .lang-selection-active {
+        text-align: center;
+        display: block;
     }
 
 }
@@ -926,7 +946,7 @@ section {
         transition-delay: 0.5s;
     }
 
-    .country-flag {
+    .country-flag:not(.small) {
         width: 40%;
     }
 

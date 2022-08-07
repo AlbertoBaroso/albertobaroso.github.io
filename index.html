@@ -10,11 +10,17 @@
         <link rel="stylesheet" type="text/css" href="style/index.css" />
         <link rel="icon" type="image/png" href="img/logo/ab_icon.png" />
 
-        <meta name="description" content="Alberto Baroso | Software Programmer, Front End & Back End Web Developer" />
+        <meta name="description" content="Alberto Baroso | Full stack developer, Computer engineering student" />
         <meta name="keywords" content="alberto,baroso,frontend,backend,developer,software,programmer" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Alberto Baroso" />
         <meta charset="utf-8" />
+    
+        <script src="scripts/language.js" defer="defer"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer="defer" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="scripts/jquery_color.js" defer="defer"></script>
+        <script src="scripts/index.js" defer="defer"></script>
+        <script src="https://kit.fontawesome.com/91bfb987c0.js" defer="defer" crossorigin="anonymous"></script>
 
     </head>
     <body>
@@ -27,40 +33,45 @@
                             <span class="toggle-icon"></span>
                         </div>
                         <ul class="nav-links" id="nav-links">
-                            <li class="nav-link" data-target="aboutme"> <a>About Me</a> </li>
-                            <li class="nav-link" data-target="knowledge"> <a>Knowledge</a> </li>
-                            <li class="nav-link" data-target="skills"> <a>Skills</a> </li>
-                            <li class="nav-link" data-target="history"> <a>History</a> </li>
-                            <li class="nav-link" data-target="contacts"> <a>Contacts</a> </li>
-                            <!-- <li class="nav-link" data-target="projects"> <a>Projects</a> </li> -->
+                            <li class="nav-link" data-target="aboutme"> <a data-i18n="link-aboutme">About Me</a> </li>
+                            <li class="nav-link" data-target="knowledge"> <a data-i18n="link-knowledge">Knowledge</a> </li>
+                            <li class="nav-link" data-target="skills"> <a data-i18n="link-skills">Skills</a> </li>
+                            <li class="nav-link" data-target="history"> <a data-i18n="link-history">History</a> </li>
+                            <li class="nav-link" data-target="contacts"> <a data-i18n="link-contacts">Contacts</a> </li>
+                            <!-- <li class="nav-link" data-target="projects"> <a data-i18n="link-projects">Projects</a> </li> -->
                         </ul>
                         <div class="lang-selection">
-                            <img class="country-flag small" src="img/flags/gb.png" alt="Great Britain flag"  id="active-lang"/>
+                            <div id="lang-selection" class="lang-selection-active">
+                                <img class="country-flag small" src="img/flags/gb.png" alt="English" data-lang="en"/>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
                             <div class="more-langs" id="more-langs">
-                                <a title="Italian version" href="index_it.html">
-                                    <img class="country-flag small" src="img/flags/it.png" alt="Italian flag"/>
-                                </a>
+                                <img class="country-flag small" src="img/flags/it.png" alt="Italian" data-lang="it"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <main class="container">
             <header class="row" id="aboutme-section">
                 <div class="col-12 header v-center">
                     <div class="row">
                         <div class="col-12 header-text animate" id="header-text">
-                            <h1 class="title-line mt-4">Hello. My name is</h1>
+                            <h1 class="title-line mt-4" data-i18n="header-greeting">Hello. My name is</h1>
                             <h1 class="title-line">Alberto Baroso</h1>
-                            <h1 class="title-line"><span class="long-text">And I work as a</span><span class="short-text">&amp; I'm a </span><span class="my-profession" id="profession"></span></h1>
+                            <h1 class="title-line">
+                                <span class="long-text" data-i18n="header-ima">And I'm a</span>
+                                <span class="short-text" data-i18n="header-ima-short">&amp; I'm a </span>
+                                <span class="my-profession" id="profession"></span>
+                            </h1>
                         </div>
                     </div>
                 </div>
             </header>
             <section class="row" id="knowledge-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4">Knowledge</h2>
+                    <h2 class="section-title animate mb-4" data-i18n="title-knowledge">Knowledge</h2>
                 </div>
                 <div class="col-12 my-4 my-md-3 knowledge-legend">
                     <div class="container-fluid">
@@ -269,25 +280,26 @@
                             <p class="skill-description" data-skill="teamwork">I enjoy working in group and i always try to give my best</p>
                         </div>
                     </div>
-                    <h2 class="section-title animate mb-4">Languages</h2>
+                    <h2 class="section-title animate mb-4" data-i18n="title-languages">Languages</h2>
                     <div class="row mb-4 text-center section-content">
                         <div class="col-12 col-sm-4 lang-container animate">
                             <img class="country-flag shadow" src="img/flags/it.png" alt="Italian flag" />
-                            <h5 class="lang-name" id="lang-it">Italian</h5>
+                            <h5 class="lang-name" id="lang-it" data-i18n="lang-italian">Italian</h5>
                             <h3 class="language-skill">C2</h3>
                         </div>
                         <div class="col-12 col-sm-4 lang-container animate">
                             <img class="country-flag shadow" src="img/flags/gb.png" alt="Great Britain flag" />
-                            <h5 class="lang-name" id="lang-en">English</h5>
+                            <h5 class="lang-name" id="lang-en" data-i18n="lang-english">English</h5>
                             <h3 class="language-skill">C1</h3>
                         </div>
                         <div class="col-12 col-sm-4 lang-container animate">
                             <img class="country-flag shadow" src="img/flags/es.png" alt="Spanish flag" />
-                            <h5 class="lang-name" id="lang-es">Spanish</h5>
+                            <h5 class="lang-name" id="lang-es" data-i18n="lang-spanish">Spanish</h5>
                             <h3 class="language-skill">B1</h3>
                         </div>
                         <div class="col-12 mb-4">
-                            <a class="framework-link animate" target="new" href="http://europass.cedefop.europa.eu/resources/european-language-levels-cefr">Common European Framework of Reference for Languages
+                            <a class="framework-link animate" target="new" href="http://europass.cedefop.europa.eu/resources/european-language-levels-cefr">
+                                <span data-i18n="link-cefr">Common European Framework of Reference for Languages</span>
                                 <img src="img/util/external.png" alt="open in a new window" class="external-icon" />
                             </a>
                         </div>
@@ -296,7 +308,7 @@
             </section>
             <section class="row v-center" id="history-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4">My History</h2>
+                    <h2 class="section-title animate mb-4" data-i18n="title-history">My History</h2>
                     <div class="events animate">
                         <label class="today">Today</label>
                         <div class="event">
@@ -320,20 +332,20 @@
             </section>
             <section class="row v-center" id="contacts-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4">Contact Me</h2>
+                    <h2 class="section-title animate mb-4" data-i18n="title-contacts">Contact Me</h2>
                     <div class="col-12 col-md-8 offset-md-2">
                         <div class="contact-container animate">
-                            <h4 class="mt-4 contact-title">My Email</h4>
+                            <h4 class="mt-4 contact-title" data-i18n="text-email">My Email</h4>
                             <span class="mb-4 contact-info">albertobaroso999@gmail.com</span>
                         </div>
                         <div class="text-sm-right contact-container animate">
-                            <h4 class="mt-4 contact-title">My Phone Number</h4>
+                            <h4 class="mt-4 contact-title" data-i18n="text-phone">My Phone Number</h4>
                             <span class="mb-4 contact-info">+39 392 </span><span class="mb-4 contact-info">5281597</span>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
         <footer class="footer animate">
             <button id="top-button" class="top-button waves-effect waves-effect show" type="button">
                 <span class="chevron"></span>
@@ -344,30 +356,34 @@
                         <img alt="AB Logo" src="img/logo/ab_logo.png" class="footer-logo" />
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="footer-title" data-target="links">Links</h6>
-                        <a class="footer-link" data-target="aboutme">About Me</a>
-                        <a class="footer-link" data-target="knowledge">Knowledge</a>
-                        <a class="footer-link" data-target="skills">Skills</a>
-                        <a class="footer-link" data-target="history">History</a>
-                        <a class="footer-link" data-target="contacts">Contacts</a>
+                        <h6 class="footer-title" data-target="links" data-i18n="title-links">Links</h6>
+                        <a class="footer-link" data-target="aboutme" data-i18n="link-aboutme">About Me</a>
+                        <a class="footer-link" data-target="knowledge" data-i18n="link-knowledge">Knowledge</a>
+                        <a class="footer-link" data-target="skills" data-i18n="link-skills">Skills</a>
+                        <a class="footer-link" data-target="history" data-i18n="link-history">History</a>
+                        <a class="footer-link" data-target="contacts" data-i18n="link-contacts">Contacts</a>
+                        <!-- <a class="footer-link" data-i18n="link-projects">Projects</a> -->
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="footer-title">Icons</h6>
-                        <p class="footer-attribution mt-4">Icons made by <a href="https://smashicons.com/" target="_blank" class="explicit-link">Smashicons</a> from <a href="https://www.flaticon.com" target="_blank" class="explicit-link">Flaticon</a></p>
+                        <h6 class="footer-title" data-i18n="title-icons">Icons</h6>
+                        <p class="footer-attribution mt-4">
+                            <span data-i18n="text-icons-by"> Icons made by </span>
+                            <a href="https://smashicons.com/" target="_blank" class="explicit-link"> Smashicons </a>
+                            <span data-i18n="text-from"> from </span>
+                            <a href="https://www.flaticon.com" target="_blank" class="explicit-link"> Flaticon </a>
+                        </p>
                     </div>
                     <div class="my-3 my-md-0 col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 v-center">
-                        <a href="https://www.instagram.com/albertobaroso/" target="_blank">
+                        <a href="https://www.instagram.com/albertobaroso/" target="_blank" rel="noopener">
                             <img alt="Instagram Logo" src="img/util/instagram.png" class="instagram-logo" />
                         </a>
+                        <!-- TODO: Add LinkedIn -->
+                        <!-- TODO: Add GitHub -->
                     </div>
                 </div>
             </div>
             <div class="footer-end text-center py-3">Alberto Baroso</div>
         </footer>
     </body>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="scripts/jquery_color.js"></script>
-    <script src="scripts/index.js"></script>
 
 </html>
