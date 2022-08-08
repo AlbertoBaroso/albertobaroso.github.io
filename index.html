@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        
         <title>Alberto Baroso</title>
-
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style/reset.css" />
-        <link rel="stylesheet" type="text/css" href="style/grid.css" />
-        <link rel="stylesheet" type="text/css" href="style/index.css" />
-        <link rel="icon" type="image/png" href="img/logo/ab_icon.png" />
-
-        <meta name="description" content="Alberto Baroso | Full stack developer, Computer engineering student" />
-        <meta name="keywords" content="alberto,baroso,frontend,backend,developer,software,programmer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Alberto Baroso" />
-        <meta charset="utf-8" />
-    
+        <link rel="stylesheet" type="text/css" href="style/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="style/grid.css"/>
+        <link rel="stylesheet" type="text/css" href="style/index.css"/>
+        <link rel="icon" type="image/png" href="img/logo/ab_icon.png"/>
+        
+        <meta name="description" content="Alberto Baroso | Full stack developer, Computer engineering student"/>
+        <meta name="keywords" content="alberto,baroso,frontend,backend,developer,software,programmer"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Alberto Baroso"/>
+        <meta charset="utf-8"/>
+        
         <script src="scripts/language.js" defer="defer"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer="defer" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="scripts/jquery_color.js" defer="defer"></script>
         <script src="scripts/index.js" defer="defer"></script>
         <script src="https://kit.fontawesome.com/91bfb987c0.js" defer="defer" crossorigin="anonymous"></script>
-
+    
     </head>
     <body>
         <nav class="navbar" id="main-nav">
@@ -33,11 +33,10 @@
                             <span class="toggle-icon"></span>
                         </div>
                         <ul class="nav-links" id="nav-links">
-                            <li class="nav-link" data-target="aboutme"> <a data-i18n="link-aboutme">About Me</a> </li>
-                            <li class="nav-link" data-target="knowledge"> <a data-i18n="link-knowledge">Knowledge</a> </li>
-                            <li class="nav-link" data-target="skills"> <a data-i18n="link-skills">Skills</a> </li>
-                            <li class="nav-link" data-target="history"> <a data-i18n="link-history">History</a> </li>
-                            <li class="nav-link" data-target="contacts"> <a data-i18n="link-contacts">Contacts</a> </li>
+                            <li class="nav-link" data-target="aboutme"><a data-i18n="link-aboutme">About Me</a></li>
+                            <li class="nav-link" data-target="skills"><a data-i18n="link-skills">Skills</a></li>
+                            <li class="nav-link" data-target="history"><a data-i18n="link-history">History</a></li>
+                            <li class="nav-link" data-target="contacts"><a data-i18n="link-contacts">Contacts</a></li>
                             <!-- <li class="nav-link" data-target="projects"> <a data-i18n="link-projects">Projects</a> </li> -->
                         </ul>
                         <div class="lang-selection">
@@ -71,237 +70,77 @@
             </header>
             <section class="row" id="knowledge-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-knowledge">Knowledge</h2>
+                    <h2 class="section-title animate mb-4" data-i18n="title-skills">Skills</h2>
                 </div>
-                <div class="col-12 my-4 my-md-3 knowledge-legend">
+                <div class="col-12 col-sm-8 mx-auto languages-container text-center animate">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-12 col-sm-4 col-xl-2 offset-xl-3">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <span class="col-6 col-sm-12 mb-2 text-medium text-right px-0 px-sm-3 text-sm-center">Base</span>
-                                        <div class="col-6 col-sm-12 mt-1 mt-sm-0 text-left text-sm-center">
-                                            <span class="diamond active"></span>
-                                            <span class="diamond"></span>
-                                            <span class="diamond"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4 col-xl-2">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <span class="col-6 col-sm-12 mb-2 text-medium text-right px-0 px-sm-3 text-sm-center">Good</span>
-                                        <div class="col-6 col-sm-12 mt-1 mt-sm-0 text-left text-sm-center">
-                                            <span class="diamond active"></span>
-                                            <span class="diamond active"></span>
-                                            <span class="diamond"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4 col-xl-2">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <span class="col-6 col-sm-12 mb-2 text-medium text-right px-0 px-sm-3 text-sm-center">Excellent</span>
-                                        <div class="col-6 col-sm-12 mt-1 mt-sm-0 text-left text-sm-center">
-                                            <span class="diamond active"></span>
-                                            <span class="diamond active"></span>
-                                            <span class="diamond active"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 languages-container text-center animate">
-                    <h3 class="languages-category">Web Dev<span class="d-none d-lg-inline-block">eloping</span><span class="d-inline-block d-lg-none">.</span></h3>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon" alt="Icon HTML" src="img/icons/html.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-html5"></i>
                                 <span class="language-name">HTML</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon" alt="Icon CSS" src="img/icons/css.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-css3-alt"></i>
                                 <span class="language-name">CSS</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon" alt="Icon JS" src="img/icons/js.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-square-js"></i>
                                 <span class="language-name">JS</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon w-50" alt="Icon PHP" src="img/icons/php.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-php"></i>
                                 <span class="language-name">PHP</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon" alt="Icon SQL" src="img/icons/sql.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-solid fa-database"></i>
                                 <span class="language-name">SQL</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon w-50" alt="Icon Node JS" src="img/icons/nodejs.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-node-js"></i>
                                 <span class="language-name">Node JS</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 languages-container text-center animate">
-                    <h3 class="languages-category">Programming</h3>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon w-100" alt="Icon JAVA" src="img/icons/java.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-java"></i>
                                 <span class="language-name">JAVA</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon" alt="Icon C++" src="img/icons/c++.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond active"></span>
-                                    <span class="diamond"></span>
-                                </div>
-                                <span class="language-name">C/C++</span>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <span class="hexagon">
+                                    <i class="fa-solid fa-c"></i>
+                                </span>
+                                <span class="language-name">C</span>
                             </div>
-                            <div class="language col-12 col-sm-6 col-lg-4 mx-auto mx-auto">
-                                <img class="language-icon w-100 px-4 px-sm-0" alt="Icon Python" src="img/icons/python.svg"/>
-                                <div class="language-level mb-3">
-                                    <span class="diamond active"></span>
-                                    <span class="diamond"></span>
-                                    <span class="diamond"></span>
-                                </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-python"></i>
                                 <span class="language-name">Python</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="row" id="skills-section">
-                <div class="col-12">
-                    <h2 class="section-title animate mb-4">My Skills</h2>
-                    <div class="row section-content my-skills animate">
-                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="arduino">
-                            <img class="skill-icon" alt="Arduino and Raspberry" src="img/skills/microprocessor.svg" />
-                            <span class="skill-name">Arduino &amp; Raspberry</span>
-                        </div>
-                        <div class="col-12 d-block d-sm-none skill-descriptions">
-                            <p class="skill-description" data-skill="arduino">I like to create projects using Arduino or Raspebrry, one of my best project (I made it with a friend) was a two-wheeled robot remotely controlled using a smartphone</p>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="responsive">
-                            <img class="skill-icon" alt="Responsive Design" src="img/skills/responsive.svg" />
-                            <span class="skill-name">Responsive Design</span>
-                        </div>
-                        <div class="col-12 d-none d-sm-block d-md-none skill-descriptions">
-                            <p class="skill-description" data-skill="arduino">I like to create projects using Arduino or Raspebrry, one of my best project (I made it with a friend) was a two-wheeled robot remotely controlled using a smartphone</p>
-                            <p class="skill-description" data-skill="responsive">In a world where phones and tablets are used daily, websites cannot fail to be responsive so i design website with a mobile-first concept in mind</p>
-                        </div>
-                        <div class="col-12 d-block d-sm-none skill-descriptions">
-                            <p class="skill-description" data-skill="responsive">In a world where phones and tablets are used daily, websites cannot fail to be responsive so i design website with a mobile-first concept in mind</p>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="editing">
-                            <img class="skill-icon" alt="Video Editing" src="img/skills/editing.svg" />
-                            <span class="skill-name">Photo/Video Editing</span>
-                        </div>
-                        <div class="col-12 d-none d-md-block skill-descriptions">
-                            <p class="skill-description" data-skill="arduino">I like to create projects using Arduino or Raspebrry, one of my best project (I made it with a friend) was a two-wheeled robot remotely controlled using a smartphone</p>
-                            <p class="skill-description" data-skill="responsive">In a world where phones and tablets are used daily, websites cannot fail to be responsive so i design website with a mobile-first concept in mind</p>
-                            <p class="skill-description" data-skill="editing">I know how to edit photos using software like GIMP or Adobe Photoshop and how to edit videos using Adobe Premiere Pro</p>
-                        </div>
-                        <div class="col-12 d-block d-sm-none skill-descriptions">
-                            <p class="skill-description" data-skill="editing">I know how to edit photos using software like GIMP or Adobe Photoshop and how to edit videos using Adobe Premiere Pro</p>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="networking">
-                            <img class="skill-icon" alt="Network" src="img/skills/networking.svg" />
-                            <span class="skill-name">Manage computer networks</span>
-                        </div>
-                        <div class="col-12 d-none d-sm-block d-md-none skill-descriptions">
-                            <p class="skill-description" data-skill="editing">I know how to edit photos using software like GIMP or Adobe Photoshop and how to edit videos using Adobe Premiere Pro</p>
-                            <p class="skill-description" data-skill="networking">I know how to design small networks of computers with security measures</p>
-                        </div>
-                        <div class="col-12 d-block d-sm-none skill-descriptions">
-                            <p class="skill-description" data-skill="networking">I know how to design small networks of computers with security measures</p>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="seo">
-                            <img class="skill-icon" alt="SEO Marketing" src="img/skills/seo.svg" />
-                            <span class="skill-name">Search Engine Optimization</span>
-                        </div>
-                        <div class="col-12 d-block d-sm-none skill-descriptions">
-                            <p class="skill-description" data-skill="seo">I wouldn't build a website if i didn't want it to be found, SEO is a fundamental aspect that i keep in mind while developing a website</p>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 skill-container" data-skill="teamwork">
-                            <img class="skill-icon" alt="Teamwork" src="img/skills/teamwork.svg" />
-                            <span class="skill-name">Teamwork</span>
-                        </div>
-                        <div class="col-12 d-none d-md-block skill-descriptions">
-                            <p class="skill-description" data-skill="networking">I know how to design small networks of computers with security measures</p>
-                            <p class="skill-description" data-skill="seo">I wouldn't build a website if i didn't want it to be found, SEO is a fundamental aspect that i keep in mind while developing a website</p>
-                            <p class="skill-description" data-skill="teamwork">I enjoy working in group and i always try to give my best</p>
-                        </div>
-                        <div class="col-12 d-none d-sm-block d-md-none skill-descriptions">
-                            <p class="skill-description" data-skill="seo">I wouldn't build a website if i didn't want it to be found, SEO is a fundamental aspect that i keep in mind while developing a website</p>
-                            <p class="skill-description" data-skill="teamwork">I enjoy working in group and i always try to give my best</p>
-                        </div>
-                        <div class="col-12 d-block d-sm-none skill-descriptions">
-                            <p class="skill-description" data-skill="teamwork">I enjoy working in group and i always try to give my best</p>
-                        </div>
-                    </div>
-                    <h2 class="section-title animate mb-4" data-i18n="title-languages">Languages</h2>
-                    <div class="row mb-4 text-center section-content">
-                        <div class="col-12 col-sm-4 lang-container animate">
-                            <img class="country-flag shadow" src="img/flags/it.png" alt="Italian flag" />
-                            <h5 class="lang-name" id="lang-it" data-i18n="lang-italian">Italian</h5>
-                            <h3 class="language-skill">C2</h3>
-                        </div>
-                        <div class="col-12 col-sm-4 lang-container animate">
-                            <img class="country-flag shadow" src="img/flags/gb.png" alt="Great Britain flag" />
-                            <h5 class="lang-name" id="lang-en" data-i18n="lang-english">English</h5>
-                            <h3 class="language-skill">C1</h3>
-                        </div>
-                        <div class="col-12 col-sm-4 lang-container animate">
-                            <img class="country-flag shadow" src="img/flags/es.png" alt="Spanish flag" />
-                            <h5 class="lang-name" id="lang-es" data-i18n="lang-spanish">Spanish</h5>
-                            <h3 class="language-skill">B1</h3>
-                        </div>
-                        <div class="col-12 mb-4">
-                            <a class="framework-link animate" target="new" href="http://europass.cedefop.europa.eu/resources/european-language-levels-cefr">
-                                <span data-i18n="link-cefr">Common European Framework of Reference for Languages</span>
-                                <img src="img/util/external.png" alt="open in a new window" class="external-icon" />
-                            </a>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-vuejs"></i>
+                                <span class="language-name">Vue.js</span>
+                            </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-react"></i>
+                                <span class="language-name">React.js</span>
+                            </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-rust"></i>
+                                <span class="language-name">Rust</span>
+                            </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-bootstrap"></i>
+                                <span class="language-name">Bootstrap</span>
+                            </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-cc-stripe"></i>
+                                <span class="language-name">Stripe</span>
+                            </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-wordpress"></i>
+                                <span class="language-name">Wordpress</span>
+                            </div>
+                            <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                                <i class="fa-brands fa-git-alt"></i>
+                                <span class="language-name">Git</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,7 +155,8 @@
                             <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title">University of Turin</h3>
-                                <label class="event-description">I'm studying Computer Science at the University of study of Turin</label>
+                                <label class="event-description">I'm studying Computer Science at the University of
+                                                                 study of Turin</label>
                             </div>
                         </div>
                         <div class="event">
@@ -324,7 +164,8 @@
                             <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title">Diploma in Information Technology</h3>
-                                <label class="event-description">I graduated in computer science at ITIS A. Artom</label>
+                                <label class="event-description">I graduated in computer science at ITIS A.
+                                                                 Artom</label>
                             </div>
                         </div>
                     </div>
@@ -353,7 +194,7 @@
             <div class="container text-center text-md-left">
                 <div class="row mt-3">
                     <div class="my-5 my-md-0 col-md-3 col-lg-4 col-xl-3 mx-auto v-center">
-                        <img alt="AB Logo" src="img/logo/ab_logo.png" class="footer-logo" />
+                        <img alt="AB Logo" src="img/logo/ab_logo.png" class="footer-logo"/>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="footer-title" data-target="links" data-i18n="title-links">Links</h6>
@@ -373,12 +214,16 @@
                             <a href="https://www.flaticon.com" target="_blank" class="explicit-link"> Flaticon </a>
                         </p>
                     </div>
-                    <div class="my-3 my-md-0 col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 v-center">
+                    <div class="my-3 my-md-0 col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 social">
                         <a href="https://www.instagram.com/albertobaroso/" target="_blank" rel="noopener">
-                            <img alt="Instagram Logo" src="img/util/instagram.png" class="instagram-logo" />
+                            <img alt="Instagram Logo" src="img/util/instagram.png" class="social__logo"/>
                         </a>
-                        <!-- TODO: Add LinkedIn -->
-                        <!-- TODO: Add GitHub -->
+                        <a href="https://www.linkedin.com/in/alberto-baroso-796951205/" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-linkedin social__logo"></i>
+                        </a>
+                        <a href="https://github.com/AlbertoBaroso" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-github social__logo"></i>
+                        </a>
                     </div>
                 </div>
             </div>

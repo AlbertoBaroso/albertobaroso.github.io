@@ -104,7 +104,7 @@ function checkAnimations(windowTop) {
             if ($element.attr("id") === "header-text" && $("#header-text").hasClass("animate")) {
 
                 /*/ Custom titles animation /*/
-                setTimeout(writeTitles, 1500);
+                setTimeout(writeTitle, 1500);
 
             } else if ($element.hasClass("languages-container") && $element.hasClass("animate")) {
 
@@ -171,58 +171,16 @@ function checkSection(scrollTop) {
 
 }
 
-function writeTitles() {
+function writeTitle() {
 
-    let lang = $("html").attr("lang");
-    let profession = $("#profession");
+    const title = "Full Stack Developer";
+    const profession = $("#profession");
     let index = 0;
-    let count = 0;
-    let titles;
 
-    if (lang === "it") {
-        titles = ["Sviluppatore Front End", "Programmatore Software", "Sviluppatore Back End"];
-    } else {
-        titles = ["Front End Developer", "Software Programmer", "Back End Developer"];
-    }
+    for (let i = 1; i <= title.length; i++)
+        setTimeout(() => profession.text(title.slice(0, i + 1)), 95 * i);
 
-    function deleteWord() {
-
-        let size = profession.text();
-
-        setTimeout(function () {
-
-            profession.text(profession.text().slice(0, profession.text().length - 1));
-
-            if (profession.text() === "") {
-                setTimeout(function () {
-                    count = 0;
-                    setTimeout(writeWord, 600);
-                }, size * 50);
-            } else {
-                deleteWord();
-            }
-
-        }, 45);
-
-    }
-
-    function writeWord() {
-
-        profession.text(profession.text() + titles[index][count++]);
-
-        if (count == titles[index].length) {
-            index = (index + 1) % titles.length;
-            setTimeout(deleteWord, 1200);
-        } else {
-            setTimeout(writeWord, 95);
-        }
-
-    }
-
-    profession.text("");
-    writeWord();
-
-};
+}
 
 function knowledgeAnimation(self) {
 
@@ -232,59 +190,9 @@ function knowledgeAnimation(self) {
 
     self.find(".language").each(function (j) {
 
-        $(this).delay(150 + j * 100).animate({
+        $(this).delay(50 + j * 80).animate({
             opacity: 1
-        }, 500);
-
-        //     let experienceText = $(this).find(".experience-text");
-        //     let experience = $(this).find(".experience");
-        //     let languageName = $(this).find(".language-name");
-        //     let languageLevel = $(this).find(".language-level");
-        //     let start = experience.data("start");
-        //     let years;
-        //
-        //     if (start === undefined) {
-        //         years = experience.data("years");
-        //     } else {
-        //         let today = new Date();
-        //         years = today.getFullYear() - start;
-        //     }
-        //
-        //
-        //
-        //     $(languageName).delay(100 + j * 100).animate({
-        //         opacity: 1
-        //     }, 500);
-        //
-        //     $(languageLevel).find(".diamond").delay(100 + j * 100).animate({
-        //         opacity: 1
-        //     }, 500);
-        //
-        //     for (let i = 0; i < 7; i++) {
-        //
-        //         let diamond = $(`<span class="diamond"></span>`);
-        //         languageLevel.append(diamond);
-        //
-        //         $(diamond).delay(400 + j * 100).animate({
-        //             opacity: 1
-        //         }, 300);
-        //
-        //         if (i < years) {
-        //             $(diamond).delay(j * 100 + (i + j * 7) * 75).animate({
-        //                 backgroundColor: "#0254d2"
-        //             }, 300);
-        //         }
-        //
-        //     }
-        //
-        //     if (years > 7) {
-        //         years = "7+";
-        //     }
-        //
-        //     experience.html(years);
-        //     $(experienceText).delay(1200 + j * 100 + (j + 1) * 7 * 75).animate({
-        //         opacity: 1
-        //     }, 400);
+        }, 400);
 
     });
 
