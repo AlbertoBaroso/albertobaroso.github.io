@@ -1,25 +1,40 @@
 {
   "link-aboutme": "About Me",
-  "link-knowledge": "Knowledge",
   "link-skills": "Skills",
   "link-history": "History",
   "link-contacts": "Contacts",
   "link-projects": "Projects",
   "link-cefr": "Common European Framework of Reference for Languages",
+
   "header-greeting": "Hello. My name is",
   "header-ima": "And I'm a",
   "header-ima-short": "& I'm a",
+
   "text-icons-by": "Icons made by",
   "text-from":  " from ",
   "text-email": "My Email",
   "text-phone": "My Phone Number",
-  "title-knowledge": "Knowledge",
+
+  "title-skills": "My Skills",
   "title-icons": "Icons",
   "title-contacts": "Contact Me",
   "title-history": "My History",
   "title-languages": "Languages",
   "title-links": "Links",
+
   "lang-italian": "Italian",
   "lang-english": "English",
-  "lang-spanish": "Spanish"
+  "lang-spanish": "Spanish",
+
+  "event-date-polytechnic-turin": "September 2021 - Now",
+  "event-title-polytechnic-turin": "Polytechnic of Turin",
+  "event-desc-polytechnic-turin": "Currently studying Computer Engineering: Artificial Intelligence & Data Analytics at Polytechnic of Turin",
+  "event-date-abc-labs": "April 2021 - Now",
+  "event-desc-abc-labs": "Currently working as a full stack developer for",
+  "event-date-university-turin": "September 2018 - July 2021",
+  "event-title-university-turin": "University of Turin",
+  "event-desc-university-turin": "Bachelor's degree in Computer Science at University of Turin",
+  "event-date-high-school": "July 2018",
+  "event-title-high-school": "Diploma in Information & Communication Technology",
+  "event-desc-high-school": "I graduated in computer science at ITIS A. Artom"
 }

@@ -1,25 +1,40 @@
 {
   "link-aboutme": "Introduzione",
-  "link-knowledge": "Conoscenze",
-  "link-skills": "Competenze",
+  "link-skills": "Conoscenze",
   "link-history": "Storia",
   "link-contacts": "Contatti",
   "link-projects": "Progetti",
   "link-cefr": "Quadro comune europeo di riferimento per le lingue",
+
   "header-greeting": "Ciao. Mi Chiamo",
   "header-ima": "E mi piace lavorare come",
   "header-ima-short": "E sono un ",
+
   "text-from":  " prese da ",
   "text-icons-by": "Icone realizzate da",
   "text-email": "E-mail",
   "text-phone": "Numero di Telefono",
-  "title-knowledge": "Conoscenze",
+
+  "title-skills": "Conoscenze",
   "title-icons": "Icone",
   "title-contacts": "Contattami",
   "title-history": "La Mia Storia",
   "title-languages": "Lingue",
   "title-links": "Sezioni",
+
   "lang-italian": "Italiano",
   "lang-english": "Inglese",
-  "lang-spanish": "Spagnolo"
+  "lang-spanish": "Spagnolo",
+
+  "event-date-polytechnic-turin": "Settembre 2021 - Oggi",
+  "event-title-polytechnic-turin": "Politecnico di Torino",
+  "event-desc-polytechnic-turin": "Laurea magistrale in Ingegneria Informatica: Intelligenza Artificiale & Data Analytics al politecnico di Torino",
+  "event-date-abc-labs": "Aprile 2021 - Oggi",
+  "event-desc-abc-labs": "Lavoro come full stack developer presso",
+  "event-date-university-turin": "Settembre 2018 - Luglio 2021",
+  "event-title-university-turin": "Università di Torino",
+  "event-desc-university-turin": "Laurea in Informatica all'Università degli Studi di Torino",
+  "event-date-high-school": "Luglio 2018",
+  "event-title-high-school": "Diploma in Tecnologie dell'informazione e della comunicazione",
+  "event-desc-high-school": "I graduated in computer science at ITIS A. Artom"
 }
