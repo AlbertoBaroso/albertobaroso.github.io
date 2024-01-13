@@ -70,7 +70,7 @@ $(function () {
     });
 
     moreLangs.addEventListener('click', async (e) => {
-        if(e.target && e.target.classList.contains('country-flag')) {
+        if (e.target && e.target.classList.contains('country-flag')) {
             const locale = e.target.dataset["lang"];
             await setLocale(locale);
             moreLangs.classList.remove('active');
@@ -173,9 +173,8 @@ function checkSection(scrollTop) {
 
 function writeTitle() {
 
-    const title = "Full Stack Developer";
+    const title = "Software Engineer";
     const profession = $("#profession");
-    let index = 0;
 
     for (let i = 1; i <= title.length; i++)
         setTimeout(() => profession.text(title.slice(0, i + 1)), 95 * i);
