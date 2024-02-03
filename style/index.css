@@ -202,12 +202,12 @@ section {
 }
 
 .lang-selection {
-    margin-right: 10px;
+    box-sizing: border-box;
     position: relative;
     padding: 0 10px;
     cursor: pointer;
     float: right;
-    width: 70px;
+    width: 80px;
 }
 
 .lang-selection-active {
