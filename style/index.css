@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+:root {
+    --history-spacing: 15px;
+}
+
 .v-center {
     justify-content: center;
     flex-direction: column;
@@ -454,8 +458,9 @@ section {
     transition: opacity 0.8s 1.2s ease;
     text-align: center;
     position: relative;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     opacity: 0;
+    max-width: 800px;
 }
 
 .events .today {
@@ -474,6 +479,7 @@ section {
     position: relative;
     padding-top: 2rem;
     min-height: 110px;
+    display: flex;
 }
 
 .events .event:before {
@@ -492,21 +498,30 @@ section {
 }
 
 .events .event:nth-child(odd) .event-content,
-.events .event:nth-child(even) .event-date {
+.events .event:nth-child(even) .event-metadata {
     text-align: left;
-    float: right;
+    order: 3;
 }
 
 .events .event:nth-child(even) .event-content,
-.events .event:nth-child(odd) .event-date {
+.events .event:nth-child(odd) .event-metadata {
     text-align: right;
-    float: left;
+    order: 1;
 }
 
-.event .event-date {
+.events .event:nth-child(odd) .event-metadata > * {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.events .event:nth-child(odd) .event-metadata .fa-solid {
+    padding: 0 0 0 .7em;
+}
+
+.event .event-metadata {
     font-weight: 500;
     color: #111;
-    width: 48%;
+    width: calc(50% - var(--history-spacing));
     margin: 0;
 }
 
@@ -517,7 +532,7 @@ section {
 
 .event .event-content {
     color: #333;
-    width: 48%;
+    width: calc(50% - var(--history-spacing));
 }
 
 .event-content .event-title {
@@ -532,9 +547,20 @@ section {
     transform: rotate(45deg);
     display: inline-block;
     background: #000;
-    min-height: 8px;
-    min-width: 8px;
+    height: 8px;
+    width: 8px;
+    margin: 8px var(--history-spacing);
     z-index: 2;
+    order: 2;
+}
+
+.event .event-metadata .event-location {
+    margin-bottom: .6rem;
+    display: block;
+}
+
+.event .event-metadata .fa-solid {
+    padding: 0 .7em 0 0;
 }
 
 .link {
@@ -781,12 +807,14 @@ section {
     .events .event {
         padding: 25px 0px 5px 35px;
         text-align: left;
+        display: flex;
+        flex-direction: column;
     }
 
     .events .event .event-marker {
         position: absolute;
         margin-top: 6px;
-        left: 31px;
+        left: 16px;
     }
 
     .events .event:before {
@@ -803,21 +831,38 @@ section {
 
     .events .event:nth-child(even) .event-content,
     .events .event:nth-child(odd) .event-content,
-    .events .event:nth-child(even) .event-date,
-    .events .event:nth-child(odd) .event-date {
+    .events .event:nth-child(even) .event-metadata,
+    .events .event:nth-child(odd) .event-metadata {
+        width: calc(100% - 40px);
         text-align: left;
         margin: 0 20px;
-        float: none;
     }
 
-    .events .event:nth-child(even) .event-content,
+    .events .event:nth-child(even) .event-metadata > *,
+    .events .event:nth-child(odd) .event-metadata > * {
+        flex-direction: row;
+    }
+
+    .events .event:nth-child(odd) .event-metadata .fa-solid {
+        padding: 0 .7em 0 0;
+    }
+
+    .events .event:nth-child(even) .event-content, 
     .events .event:nth-child(odd) .event-content {
-        width: calc(100% - 40px);
+        order: 1;
     }
 
-    .events .event:nth-child(even) .event-content .event-title,
-    .events .event:nth-child(odd) .event-content .event-title {
-        margin: 0;
+    .events .event:nth-child(odd) .event-metadata,
+    .events .event:nth-child(even) .event-metadata {
+        order: 3;
+    }
+
+    .event-content .event-title {
+        margin: 0 0 .3em 0;
+    }
+
+    .event .event-metadata .event-location {
+        margin: .5em 0 .4em 0;
     }
 
     .lang-selection-active {
