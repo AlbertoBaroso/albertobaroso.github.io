@@ -321,23 +321,6 @@ section {
     display: block;
 }
 
-.hexagon::before {
-    content: "\2B22";
-    color: #000;
-    font-size: 4rem;
-    line-height: 0.6em;
-}
-
-.fa-solid.fa-c {
-    position: absolute;
-    left: 0;
-    right: 0;
-    line-height: 1.6em;
-    margin: auto;
-    color: #fff;
-    font-size: .5em;
-}
-
 /*/
  *      Skills Section
 /*/
@@ -448,6 +431,12 @@ section {
     margin-bottom: 3rem;
     text-align: center;
     display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-icon {
+        filter: invert(1);
+    }
 }
 
 /*/
