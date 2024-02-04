@@ -111,7 +111,7 @@ function checkAnimations(windowTop) {
                 /*/ Custom languages animation /*/
                 setTimeout(function () {
                     knowledgeAnimation($element);
-                }, 1000);
+                }, 700);
 
             }
 
@@ -176,8 +176,8 @@ function writeTitle() {
     const title = "Software Engineer";
     const profession = $("#profession");
 
-    for (let i = 1; i <= title.length; i++)
-        setTimeout(() => profession.text(title.slice(0, i + 1)), 95 * i);
+    for (let i = 0; i <= title.length; i++)
+        setTimeout(() => profession.text(title.slice(0, i + 1)), 95 * (i + 1));
 
 }
 
@@ -191,36 +191,11 @@ function knowledgeAnimation(self) {
 
         $(this).delay(50 + j * 80).animate({
             opacity: 1
-        }, 400);
+        }, 200);
 
     });
 
 }
-
-
-/*/ Show/Hide Skill Descriptions /*/
-$(".skill-container").on("click", function () {
-
-    let skill = $(this).data("skill");
-    let hidden = true;
-
-    $(".skill-description").each(function () {
-        if ($(this).data("skill") == skill && $(this).is(":visible")) {
-            hidden = false;
-        }
-    });
-
-    $(".skill-description").slideUp();
-
-    if (hidden) {
-        $(".skill-description").each(function () {
-            if ($(this).data("skill") == skill) {
-                $(this).slideDown();
-            }
-        });
-    }
-
-});
 
 /*/ Back to Top Link Animation /*/
 $("#top-button").on("click", function () {
