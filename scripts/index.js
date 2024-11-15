@@ -173,7 +173,7 @@ function checkSection(scrollTop) {
 
 function writeTitle() {
 
-    const title = "Software Engineer";
+    const title = "Computer Engineer";
     const profession = $("#profession");
 
     for (let i = 0; i <= title.length; i++)
