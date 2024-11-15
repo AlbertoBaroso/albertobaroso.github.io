@@ -2,10 +2,20 @@
  *      General
 /*/
 
+:root {
+    --primary-color: #0254d2;
+    --secondary-color: #055ade;
+    --text-color: #111;
+    --text-color-secondary: #2f2f2f;
+    --bg-color: #fff;
+    --bg-color-secondary: #edf1f5;
+}
+
 body {
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.16);
     font-family: "Montserrat", sans-serif;
-    background-color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -37,7 +47,7 @@ section {
 .section-title:after {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: width 0.4s 1s ease;
-    background-color: #0254d2;
+    background-color: var(--primary-color);
     margin-top: -4px;
     display: block;
     content: '';
@@ -75,8 +85,8 @@ section {
 
 .chevron {
     transform: translate(-50%, 0%) rotate(45deg);
-    border-left: 5px solid #333;
-    border-top: 5px solid #333;
+    border-left: 5px solid var(--text-color-secondary);
+    border-top: 5px solid var(--text-color-secondary);
     position: relative;
     display: block;
     height: 20px;
@@ -93,7 +103,7 @@ section {
     transition: box-shadow 0.3s ease;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: var(--bg-color);
     padding: 1rem 0;
     flex-wrap: wrap;
     position: fixed;
@@ -104,7 +114,7 @@ section {
 
 .nav-shadow {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    border-bottom: 1px solid #edf1f5;
+    border-bottom: 1px solid var(--bg-color-secondary);
 }
 
 .logo {
@@ -135,7 +145,7 @@ section {
 .nav-link.active,
 .nav-link:hover,
 .my-profession {
-    color: #0254d2;
+    color: var(--primary-color);
 }
 
 .nav-link.active:after {
@@ -144,7 +154,7 @@ section {
 
 .nav-link:after {
     transition: width 0.3s ease;
-    background-color: #055ade;
+    background-color: var(--secondary-color);
     margin-top: 2px;
     display: block;
     height: 3px;
@@ -163,7 +173,7 @@ section {
 .toggle-nav .toggle-icon:after,
 .toggle-nav .toggle-icon {
     transition: all 0.25s linear;
-    background-color: #111;
+    background-color: --var(text-color);
     height: 5px;
     width: 30px;
 }
@@ -215,14 +225,14 @@ section {
     display: flex;
 }
 
-.lang-selection > :first-child {
+.lang-selection> :first-child {
     padding-right: .5rem;
 }
 
 .more-langs {
     transition: max-height .35s ease-out, padding .35s ease-out, margin .35s ease-out;
     position: absolute;
-    background: #fff;
+    background: var(--bg-color);
     overflow: hidden;
     cursor: pointer;
     max-height: 0;
@@ -233,7 +243,7 @@ section {
 }
 
 .more-langs.active {
-    border: 1px solid #edf1f5;
+    border: 1px solid var(--bg-color-secondary);
     max-height: 56px;
     padding: 0.6rem;
     width: 3.6rem;
@@ -265,7 +275,7 @@ section {
     animation: 1s blink step-end infinite;
     display: inline-block;
     margin: 0 0 -3px 2px;
-    background: #0254d2;
+    background: var(--primary-color);
     height: 40px;
     content: "";
     width: 2px;
@@ -281,7 +291,7 @@ section {
     display: inline-block;
     line-height: 4rem;
     font-size: 4.2rem;
-    color: #0254d2;
+    color: var(--primary-color);
 }
 
 .title-line:nth-of-type(3) {
@@ -350,19 +360,13 @@ section {
     text-align: center;
     font-weight: 300;
     font-size: 3rem;
-    color: #0254d2;
+    color: var(--primary-color);
 }
 
 .language-skill {
     margin-bottom: 2rem;
     font-weight: 700;
     font-size: 3rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    .dark-icon {
-        filter: invert(1);
-    }
 }
 
 /*/
@@ -381,11 +385,11 @@ section {
 .events .today {
     font-variant: small-caps;
     text-align: center;
-    background: #111;
+    background: var(--text-color);
     margin: 0 auto;
     display: block;
     padding: 5px;
-    color: #fff;
+    color: var(--bg-color);
     width: 70px;
 }
 
@@ -400,7 +404,7 @@ section {
 .events .event:before {
     position: absolute;
     margin-left: -1px;
-    background: #111;
+    background: var(--text-color);
     height: 100%;
     content: "";
     width: 2px;
@@ -424,7 +428,7 @@ section {
     order: 1;
 }
 
-.events .event:nth-child(odd) .event-metadata > * {
+.events .event:nth-child(odd) .event-metadata>* {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -435,7 +439,7 @@ section {
 
 .event .event-metadata {
     font-weight: 500;
-    color: #111;
+    color: var(--text-color);
     width: calc(50% - var(--history-spacing));
     margin: 0;
 }
@@ -446,7 +450,7 @@ section {
 }
 
 .event .event-content {
-    color: #333;
+    color: var(--text-color-secondary);
     width: calc(50% - var(--history-spacing));
 }
 
@@ -454,14 +458,14 @@ section {
     margin: 0 0 .3rem 0;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #222;
+    color: var(--text-color-secondary);
 }
 
 .event .event-marker {
-    box-shadow: 0px 0px 0px 1px #fff;
+    box-shadow: 0px 0px 0px 1px var(--bg-color);
     transform: rotate(45deg);
     display: inline-block;
-    background: #000;
+    background: var(--text-color);
     height: 8px;
     width: 8px;
     margin: 8px var(--history-spacing);
@@ -514,14 +518,14 @@ section {
 .footer {
     transition: opacity 0.5s 0.5s ease;
     position: relative;
-    color: #333;
+    color: var(--text-color-secondary);
     opacity: 0;
 }
 
 .footer:before {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: width 0.6s 1s ease;
-    background-color: #0254d2;
+    background-color: var(--primary-color);
     margin-bottom: 3rem;
     margin-top: -4px;
     display: block;
@@ -535,7 +539,7 @@ section {
     margin-bottom: 1rem;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #111;
+    color: var(--text-color);
 }
 
 .footer-logo {
@@ -558,7 +562,7 @@ section {
     margin: 0 auto;
     height: 40px;
     width: 40px;
-    color: #000;
+    color: var(--text-color);
 }
 
 .footer-link {
@@ -569,13 +573,13 @@ section {
 }
 
 .footer-link:hover {
-    color: #000;
+    color: var(--text-color);
 }
 
 .top-button {
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
     transition: background-color 0.4s ease;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
@@ -593,16 +597,16 @@ section {
 }
 
 .top-button:hover {
-    background-color: #dedede;
+    background-color: var(--primary-color);
 }
 
 .explicit-link {
-    color: #111;
+    color: var(--text-color);
 }
 
 .footer-end {
     font-weight: 700;
-    color: #222;
+    color: var(--text-color-secondary);
 }
 
 /*/
@@ -653,7 +657,7 @@ section {
 
     .navbar.show {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        border-bottom: 1px solid #edf1f5;
+        border-bottom: 1px solid var(--bg-color-secondary);
     }
 
     .navbar.show .nav-links {
@@ -753,8 +757,8 @@ section {
         margin: 0 20px;
     }
 
-    .events .event:nth-child(even) .event-metadata > *,
-    .events .event:nth-child(odd) .event-metadata > * {
+    .events .event:nth-child(even) .event-metadata>*,
+    .events .event:nth-child(odd) .event-metadata>* {
         flex-direction: row;
     }
 
@@ -762,7 +766,7 @@ section {
         padding: 0 .7em 0 0;
     }
 
-    .events .event:nth-child(even) .event-content, 
+    .events .event:nth-child(even) .event-content,
     .events .event:nth-child(odd) .event-content {
         order: 1;
     }
@@ -890,6 +894,7 @@ section {
     from, to {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
@@ -962,4 +967,25 @@ section {
         display: block;
     }
 
+}
+
+/*/
+ *      Dark Mode
+/*/
+
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --primary-color: #2274e2;
+        --secondary-color: #257ade;
+        --text-color: #fff;
+        --text-color-secondary: #e2e2e2;
+        --bg-color: #111;
+        --bg-color-secondary: #2f2f2f;
+    }
+
+    .dark-icon {
+        filter: invert(1);
+    }
 }
