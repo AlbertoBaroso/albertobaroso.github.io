@@ -28,8 +28,8 @@
 
   "event-date-today": "OGGI",
   "event-date-blue-reply-work": "Ottobre 2023 - Oggi",
-  "event-title-blue-reply-work": "Devops Engineer",
-  "event-desc-blue-reply-work": "Attualmente sto lavorando come Devops Engineer presso",
+  "event-title-blue-reply-work": "Consulente IT",
+  "event-desc-blue-reply-work": "Attualmente sto lavorando come Consulente IT presso",
   "event-date-hkn-it": "Marzo 2023 - Oggi",
   "event-title-hkn-it": "Membro & Responsabile dell'Area IT",
   "event-desc-hkn-it": "Ho iniziato come membro dell'area IT lavorando allo sviluppo di una web app con lo scopo di rendere più efficiente il processo di recruitment. Successivamente sono diventato il responsabile dell'area IT dell'",
@@ -51,6 +51,10 @@
   "event-date-high-school": "Luglio 2018",
   "event-title-high-school": "Diploma in ICT",
   "event-desc-high-school": "Mi sono diplomato con 100/100 in Tecnologie dell'informazione e della comunicazione",
-  "event-location-turin": "Torino, Italia"
+  "event-location-turin": "Torino, Italia",
+  "event-title-aws-dva": "AWS Certified Developer - Associate",
+  "event-link-aws-dva": "Certificato",
+  "event-desc-aws-dva": "Vedi il ",
+  "event-date-aws-dva": "Dicembre 2024"
 
 }

@@ -31,8 +31,8 @@
   "event-title-polytechnic-turin": "Master's degree",
   "event-desc-polytechnic-turin": "I completed my master's degree in Computer Engineering at Polytechnic of Turin graduating with 110/110 cum laude",
   "event-date-blue-reply-work": "October 2023 - Now",
-  "event-title-blue-reply-work": "DevOps Engineer",
-  "event-desc-blue-reply-work": "Currently working as an DevOps Engineer in the DevOps field at",
+  "event-title-blue-reply-work": "IT Consultant",
+  "event-desc-blue-reply-work": "Currently working as an IT Consultant in the DevOps field at",
   "event-date-hkn-it": "March 2023 - September 2024",
   "event-title-hkn-it": "Member & Head of IT Department",
   "event-desc-hkn-it": "Starting as a member of the IT department, I worked on the development of a web app aimed at enhancing the recruitment process, and I eventually became the head of the IT department of",
@@ -51,5 +51,9 @@
   "event-desc-high-school": "I graduated with 100/100 in Information & Communication Technology at I.T.I.S. A. Artom",
   "event-location-high-school": "I.T.I.S. A. Artom, Asti, Italy",
   "event-location-turin": "Turin, Italy",
-  "event-location-polytechnic-turin": "Polytechnic of Turin, Italy"
+  "event-location-polytechnic-turin": "Polytechnic of Turin, Italy",
+  "event-title-aws-dva": "AWS Certified Developer - Associate",
+  "event-link-aws-dva": "Certification Badge",
+  "event-desc-aws-dva": "See ",
+  "event-date-aws-dva": "December 2024"
 }
