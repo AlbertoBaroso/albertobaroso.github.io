@@ -51,5 +51,9 @@
   "event-desc-high-school": "I graduated with 100/100 in Information & Communication Technology at I.T.I.S. A. Artom",
   "event-location-high-school": "I.T.I.S. A. Artom, Asti, Italy",
   "event-location-turin": "Turin, Italy",
-  "event-location-polytechnic-turin": "Polytechnic of Turin, Italy"
+  "event-location-polytechnic-turin": "Polytechnic of Turin, Italy",
+  "event-title-aws-dva": "AWS Certified Developer - Associate",
+  "event-link-aws-dva": "Certification Badge",
+  "event-desc-aws-dva": "See ",
+  "event-date-aws-dva": "December 2024"
 }
