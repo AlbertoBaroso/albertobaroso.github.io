@@ -135,6 +135,8 @@ section {
     display: inline-block;
     margin-left: 10px;
     font-weight: 500;
+    font-family: "Space Mono", monospace;
+    font-size: .85rem;
     cursor: pointer;
 }
 
@@ -367,11 +369,128 @@ section {
     font-size: 3rem;
 }
 
+.languages-container,
+.contact-panel {
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--bg-color-secondary);
+    border-radius: 10px;
+    background: var(--bg-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .07);
+}
+
+#skills-section {
+    align-content: center;
+}
+
+main .section-title {
+    margin: 0 0 1.75rem;
+    font: 700 clamp(1.9rem, 4.5vw, 3.25rem)/1.2 "Space Mono", monospace;
+    letter-spacing: -.04em;
+}
+
+main .section-title::before {
+    content: ">";
+    margin-right: .45em;
+    color: var(--primary-color);
+    font-size: .7em;
+    vertical-align: .1em;
+}
+
+.skills-panel-head,
+.contact-panel-head {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .75rem 1rem;
+    border-bottom: 1px solid var(--bg-color-secondary);
+    background: var(--bg-color-secondary);
+    color: var(--text-color-secondary);
+    font: 600 .78rem "Space Mono", monospace;
+}
+
+.panel-dots {
+    display: inline-flex;
+    gap: .25rem;
+}
+
+.panel-dots span {
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: var(--text-color-secondary);
+    opacity: .45;
+}
+
+.panel-dots span:first-child {
+    background: var(--primary-color);
+    opacity: 1;
+}
+
+.panel-format {
+    margin-left: auto;
+    font-size: .68rem;
+    opacity: .65;
+}
+
+.languages-container .container-fluid {
+    padding: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    counter-reset: skill;
+    margin: 0;
+}
+
+.skills-grid .language {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 1rem .8rem;
+    border-right: 1px solid var(--bg-color-secondary);
+    border-bottom: 1px solid var(--bg-color-secondary);
+    text-align: left;
+    font-size: 1.7rem;
+}
+
+.skills-grid .language::before {
+    counter-increment: skill;
+    content: counter(skill, decimal-leading-zero);
+    flex: none;
+    color: var(--text-color-secondary);
+    opacity: .6;
+    font: 500 .68rem "Space Mono", monospace;
+}
+
+.skills-grid .language i,
+.skills-grid .language img {
+    flex: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+}
+
+.skills-grid .language-name {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+    color: var(--text-color);
+    font: 600 .88rem/1.3 "Space Mono", monospace;
+}
+
 /*/
  *      History Section
 /*/
 
 #history-section {
+    padding-top: 6rem;
     --history-main: #a6afb9;
     --history-work: #53acd8;
     --history-education: #8d78c9;
@@ -604,25 +723,49 @@ section {
  *      Contacts Section
 /*/
 
-.contact-container {
+.contact-panel {
+    padding: 0;
     opacity: 0;
+    transition: opacity .8s .2s ease;
 }
 
-.contact-container:nth-of-type(1) {
-    transition: opacity 0.8s 0.5s ease;
+.contact-line {
+    display: grid;
+    grid-template-columns: minmax(145px, .35fr) minmax(0, 1fr);
+    gap: .5rem 1rem;
+    align-items: baseline;
+    padding: 1.15rem 1.35rem;
 }
 
-.contact-container:nth-of-type(2) {
-    transition: opacity 0.8s 1s ease;
+.contact-line + .contact-line {
+    border-top: 1px solid var(--bg-color-secondary);
 }
 
-.contact-title {
-    font-weight: 700;
-    font-size: 2rem;
+.contact-key {
+    color: var(--primary-color);
+    font: 600 .85rem "Space Mono", monospace;
 }
 
-.contact-info {
-    font-size: 1.5rem;
+.contact-key::after {
+    content: ":";
+}
+
+.contact-value {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: var(--text-color);
+    font: 600 1rem/1.5 "Space Mono", monospace;
+    text-decoration: none;
+}
+
+.contact-line a.contact-value {
+    font-size: clamp(.8rem, 2.5vw, 1rem);
+}
+
+.contact-value[href]:hover,
+.contact-value[href]:focus-visible {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 /*/
@@ -651,7 +794,8 @@ section {
 .footer-title {
     text-transform: uppercase;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-color);
 }
@@ -719,6 +863,8 @@ section {
 }
 
 .footer-end {
+    font-family: "Space Mono", monospace;
+    font-size: .8rem;
     font-weight: 700;
     color: var(--text-color-secondary);
 }
@@ -727,7 +873,7 @@ section {
  *      Fade In Animations
 /*/
 
-.contact-container.show,
+.contact-panel.show,
 .lang-container.show,
 .framework-link.show,
 .section-title.show,
@@ -742,6 +888,10 @@ section {
 /*/
 
 @media screen and (max-width: 991px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
     .title-line:nth-of-type(1) {
         font-size: 50px;
@@ -766,6 +916,10 @@ section {
 }
 
 @media screen and (max-width: 767px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
     /*/ Nav Bar /*/
 
@@ -918,6 +1072,20 @@ section {
 
     /*/ General /*/
 
+    .languages-container {
+        flex: 0 0 calc(100% - 1.5rem);
+        max-width: calc(100% - 1.5rem);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-line {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
     .section-title {
         font-size: 2.5rem;
     }
@@ -968,16 +1136,6 @@ section {
 
     .country-flag:not(.small) {
         width: 40%;
-    }
-
-    /*/ Contact Section /*/
-
-    .contact-title {
-        font-size: 1.45rem;
-    }
-
-    .contact-info {
-        font-size: 1rem;
     }
 
 }

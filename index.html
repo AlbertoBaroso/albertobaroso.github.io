@@ -60,7 +60,7 @@
                 <div class="col-12 header v-center">
                     <div class="row">
                         <div class="col-12 header-text animate" id="header-text">
-                            <h1 class="title-line mt-4" data-i18n="header-greeting">Hello. My name is</h1>
+                            <h1 class="title-line" data-i18n="header-greeting">Hello. My name is</h1>
                             <h1 class="title-line">Alberto Baroso</h1>
                             <h1 class="title-line">
                                 <span class="long-text" data-i18n="header-ima">And I'm a</span>
@@ -77,11 +77,16 @@
             </header>
             <section class="row" id="skills-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-skills">My Skills</h2>
+                    <h2 class="section-title animate" data-i18n="title-skills">My Skills</h2>
                 </div>
-                <div class="col-12 col-sm-8 mx-auto languages-container text-center animate">
+                <div class="col-12 col-lg-10 mx-auto languages-container animate">
+                    <div class="skills-panel-head">
+                        <span class="panel-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <code>skills.yml</code>
+                        <span class="panel-format">YAML</span>
+                    </div>
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row skills-grid">
                             <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
                                 <i class="fa-brands fa-python"></i>
                                 <span class="language-name">Python</span>
@@ -152,7 +157,7 @@
             </section>
             <section class="row v-center" id="history-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-history">My History</h2>
+                    <h2 class="section-title animate" data-i18n="title-history">My History</h2>
                     <div class="history-legend">
                         <span class="history-legend-item history-legend-item--work" data-i18n="history-work">Work</span>
                         <span class="history-legend-item history-legend-item--education" data-i18n="history-education">Education</span>
@@ -320,15 +325,20 @@
             </section>
             <section class="row v-center" id="contacts-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-contacts">Contact Me</h2>
-                    <div class="col-12 col-md-8 offset-md-2">
-                        <div class="contact-container animate">
-                            <h4 class="mt-4 contact-title" data-i18n="text-email">My Email</h4>
-                            <span class="mb-4 contact-info">albertobaroso999@gmail.com</span>
+                    <h2 class="section-title animate" data-i18n="title-contacts">Contact Me</h2>
+                    <div class="contact-panel col-12 col-md-9 mx-auto animate">
+                        <div class="contact-panel-head">
+                            <span class="panel-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                            <code>contact.yml</code>
+                            <span class="panel-format">YAML</span>
                         </div>
-                        <div class="text-sm-right contact-container animate">
-                            <h4 class="mt-4 contact-title" data-i18n="text-phone">My Phone Number</h4>
-                            <span class="mb-4 contact-info">+39 392 </span><span class="mb-4 contact-info">5281597</span>
+                        <div class="contact-line">
+                            <span class="contact-key" data-i18n="text-email">My Email</span>
+                            <a class="contact-value" href="mailto:albertobaroso999@gmail.com">albertobaroso999@gmail.com</a>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-key" data-i18n="text-phone">My Phone Number</span>
+                            <span class="contact-value"><span>+39 392 </span><span>5281597</span></span>
                         </div>
                     </div>
                 </div>
