@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+
         <title>Alberto Baroso</title>
-        
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style/reset.css"/>
         <link rel="stylesheet" type="text/css" href="style/grid.css"/>
         <link rel="stylesheet" type="text/css" href="style/index.css"/>
         <link rel="icon" type="image/png" href="img/logo/ab_icon.png"/>
-        
-        <meta name="description" content="Alberto Baroso | Computer Engineer"/>
+
+        <meta name="description" content="Alberto Baroso | Software Engineer"/>
         <meta name="keywords" content="alberto,baroso,frontend,backend,developer,software,programmer"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="author" content="Alberto Baroso"/>
         <meta charset="utf-8"/>
-        
+
         <script src="scripts/language.js" defer="defer"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer="defer" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="scripts/jquery_color.js" defer="defer"></script>
         <script src="scripts/index.js" defer="defer"></script>
+        <script src="scripts/history.js" defer="defer"></script>
         <script src="https://kit.fontawesome.com/91bfb987c0.js" defer="defer" crossorigin="anonymous"></script>
-    
+
     </head>
     <body>
         <nav class="navbar" id="main-nav">
@@ -57,14 +60,14 @@
                 <div class="col-12 header v-center">
                     <div class="row">
                         <div class="col-12 header-text animate" id="header-text">
-                            <h1 class="title-line mt-4" data-i18n="header-greeting">Hello. My name is</h1>
+                            <h1 class="title-line" data-i18n="header-greeting">Hello. My name is</h1>
                             <h1 class="title-line">Alberto Baroso</h1>
                             <h1 class="title-line">
                                 <span class="long-text" data-i18n="header-ima">And I'm a</span>
                                 <span class="short-text" data-i18n="header-ima-short">&amp; I'm a </span>
                                 <span class="my-profession" id="profession">
                                     <noscript>
-                                        Computer Engineer
+                                        Software Engineer
                                     </noscript>
                                 </span>
                             </h1>
@@ -74,11 +77,16 @@
             </header>
             <section class="row" id="skills-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-skills">My Skills</h2>
+                    <h2 class="section-title animate" data-i18n="title-skills">My Skills</h2>
                 </div>
-                <div class="col-12 col-sm-8 mx-auto languages-container text-center animate">
+                <div class="col-12 col-lg-10 mx-auto languages-container animate">
+                    <div class="skills-panel-head">
+                        <span class="panel-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <code>skills.yml</code>
+                        <span class="panel-format">YAML</span>
+                    </div>
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row skills-grid">
                             <div class="language col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
                                 <i class="fa-brands fa-python"></i>
                                 <span class="language-name">Python</span>
@@ -149,10 +157,58 @@
             </section>
             <section class="row v-center" id="history-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-history">My History</h2>
-                    <div class="events animate">
+                    <h2 class="section-title animate" data-i18n="title-history">My History</h2>
+                    <div class="history-legend">
+                        <span class="history-legend-item history-legend-item--work" data-i18n="history-work">Work</span>
+                        <span class="history-legend-item history-legend-item--education" data-i18n="history-education">Education</span>
+                        <span class="history-legend-item history-legend-item--community" data-i18n="history-community">Community</span>
+                    </div>
+                    <div class="events animate" id="history-timeline">
+                        <svg class="history-lines" aria-hidden="true"></svg>
+                        <div class="history-years" aria-hidden="true"></div>
                         <label class="today" data-i18n="event-date-today">Today</label>
-                        <div class="event">
+                        <div class="event event--work" data-start="2025-08" data-end="present" data-lane="-1">
+                            <div class="event-pr-head"><code class="event-ref">work/aws <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--active" data-i18n="history-active">Active</span></div>
+                            <div class="event-metadata">
+                                <label class="event-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span data-i18n="event-location-aws">Asti, Piedmont, Italy</span>
+                                </label>
+                                <label class="event-date">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span data-i18n="event-date-aws-work">August 2025 - Present</span>
+                                </label>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title" data-i18n="event-title-aws-work">Software Dev Engineer</h3>
+                                <label class="event-description" data-i18n="event-desc-aws-work">
+                                    Currently working full-time as a Software Engineer at
+                                </label>
+                                <a href="https://aws.amazon.com/" rel="noopener" target="_blank" class="explicit-link">Amazon Web Services (AWS)</a>
+                            </div>
+                        </div>
+                        <div class="event event--work" data-start="2023-10" data-end="2025-07" data-lane="-1">
+                            <div class="event-pr-head"><code class="event-ref">work/blue-reply <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--merged" data-i18n="history-merged">Merged</span></div>
+                            <div class="event-metadata">
+                                <label class="event-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span data-i18n="event-location-turin">Turin, Italy</span>
+                                </label>
+                                <label class="event-date">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span data-i18n="event-date-blue-reply-work">October 2023 - July 2025</span>
+                                </label>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title" data-i18n="event-title-blue-reply-work">IT Consultant</h3>
+                                <label class="event-description" data-i18n="event-desc-blue-reply-work">
+                                    I worked as an IT Consultant in the DevOps field at
+                                </label>
+                                <a href="https://www.reply.com/blue-reply/" rel="noopener" target="_blank" class="explicit-link">Blue Reply</a>
+                            </div>
+                        </div>
+                        <div class="event event--education" data-start="2024-12" data-end="2024-12" data-lane="0">
+                            <div class="event-pr-head"><code class="event-ref">certification/aws-developer-associate</code><span class="event-state event-state--milestone" data-i18n="history-milestone">Milestone</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -163,36 +219,14 @@
                                     <span data-i18n="event-date-aws-dva">December 2024</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title" data-i18n="event-title-aws-dva">AWS Certified Developer - Associate</h3>
-                                <label class="event-description" data-i18n="event-desc-aws-dva">
-                                    See 
-                                </label>
+                                <label class="event-description" data-i18n="event-desc-aws-dva">See </label>
                                 <a data-i18n="event-link-aws-dva" href="https://www.credly.com/badges/dd1b55b5-573b-43c2-89ab-d9541a910874/public_url" rel="noopener" target="_blank" class="explicit-link">Certification Badge</a>
                             </div>
                         </div>
-                        <div class="event">
-                            <div class="event-metadata">
-                                <label class="event-location">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <span data-i18n="event-location-turin">Turin, Italy</span>
-                                </label>
-                                <label class="event-date">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    <span data-i18n="event-date-blue-reply-work">October 2023 - Now</span>
-                                </label>
-                            </div>
-                            <div class="event-marker"></div>
-                            <div class="event-content">
-                                <h3 class="event-title" data-i18n="event-title-blue-reply-work">IT Consultant</h3>
-                                <label class="event-description" data-i18n="event-desc-blue-reply-work">
-                                    Currently working as an IT Consultant at
-                                </label>
-                                <a href="https://www.reply.com/blue-reply/" rel="noopener" target="_blank" class="explicit-link">Blue Reply</a>
-                            </div>
-                        </div>
-                        <div class="event">
+                        <div class="event event--community" data-start="2023-03" data-end="2024-09" data-lane="2">
+                            <div class="event-pr-head"><code class="event-ref">community/hkn <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--merged" data-i18n="history-merged">Merged</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -203,7 +237,6 @@
                                     <span data-i18n="event-date-hkn-it">March 2023 - September 2024</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title" data-i18n="event-title-hkn-it">Member & Head of IT Department</h3>
                                 <label class="event-description" data-i18n="event-desc-hkn-it">
@@ -212,7 +245,8 @@
                                 <a href="https://www.hknpolito.org" rel="noopener" target="_blank" class="explicit-link">IEEE HKN Mu Nu Chapter</a>.
                             </div>
                         </div>
-                        <div class="event">
+                        <div class="event event--work" data-start="2023-03" data-end="2023-09" data-lane="-1">
+                            <div class="event-pr-head"><code class="event-ref">work/blue-reply-intern <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--merged" data-i18n="history-merged">Merged</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -223,7 +257,6 @@
                                     <span data-i18n="event-date-blue-reply-internship">March 2023 - September 2023</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title" data-i18n="event-title-blue-reply-internship">IT Intern</h3>
                                 <label class="event-description" data-i18n="event-desc-blue-reply-internship">
@@ -232,7 +265,8 @@
                                 <a href="https://www.reply.com/blue-reply/" rel="noopener" target="_blank" class="explicit-link">Blue Reply</a>
                             </div>
                         </div>
-                        <div class="event">
+                        <div class="event event--education" data-start="2021-09" data-end="2023-10" data-lane="1">
+                            <div class="event-pr-head"><code class="event-ref">education/masters <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--merged" data-i18n="history-merged">Merged</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -243,7 +277,6 @@
                                     <span data-i18n="event-date-polytechnic-turin">September 2021 - October 2023</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title" data-i18n="event-title-polytechnic-turin">Master's degree</h3> 
                                 <label class="event-description" data-i18n="event-desc-polytechnic-turin">
@@ -251,18 +284,18 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="event">
+                        <div class="event event--work" data-start="2021-04" data-end="2023-12" data-lane="-2">
+                            <div class="event-pr-head"><code class="event-ref">work/abc-labs <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--merged" data-i18n="history-merged">Merged</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <span data-i18n="event-location-abc-labs">Asti, Italy</span>
                                 </label>
-                                <label class="event-date" data-i18n="event-date-abc-labs">
+                                <label class="event-date">
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <span data-i18n="event-date-abc-labs">April 2021 - December 2023</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title">ABC Labs</h3>
                                 <label class="event-description">
@@ -271,7 +304,8 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="event">
+                        <div class="event event--education" data-start="2018-09" data-end="2021-07" data-lane="1">
+                            <div class="event-pr-head"><code class="event-ref">education/bachelors <span aria-hidden="true">&rarr;</span> main</code><span class="event-state event-state--merged" data-i18n="history-merged">Merged</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -282,13 +316,13 @@
                                     <span data-i18n="event-date-university-turin">September 2018 - July 2021</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title" data-i18n="event-title-university-turin">Bachelor's degree</h3>
                                 <label class="event-description" data-i18n="event-desc-university-turin">I completed my bachelor's degree in Computer Science at University of Turin graduating with 110/110 cum laude</label>
                             </div>
                         </div>
-                        <div class="event">
+                        <div class="event event--education" data-start="2018-07" data-end="2018-07" data-lane="0">
+                            <div class="event-pr-head"><code class="event-ref">education/ict-diploma</code><span class="event-state event-state--milestone" data-i18n="history-milestone">Milestone</span></div>
                             <div class="event-metadata">
                                 <label class="event-location">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -299,7 +333,6 @@
                                     <span data-i18n="event-date-high-school">July 2018</span>
                                 </label>
                             </div>
-                            <div class="event-marker"></div>
                             <div class="event-content">
                                 <h3 class="event-title" data-i18n="event-title-high-school">Diploma in ICT</h3>
                                 <label class="event-description" data-i18n="event-desc-high-school">I graduated with 100/100 in Information & Communication Technology at I.T.I.S. A. Artom</label>
@@ -310,15 +343,20 @@
             </section>
             <section class="row v-center" id="contacts-section">
                 <div class="col-12">
-                    <h2 class="section-title animate mb-4" data-i18n="title-contacts">Contact Me</h2>
-                    <div class="col-12 col-md-8 offset-md-2">
-                        <div class="contact-container animate">
-                            <h4 class="mt-4 contact-title" data-i18n="text-email">My Email</h4>
-                            <span class="mb-4 contact-info">albertobaroso999@gmail.com</span>
+                    <h2 class="section-title animate" data-i18n="title-contacts">Contact Me</h2>
+                    <div class="contact-panel col-12 col-md-9 mx-auto animate">
+                        <div class="contact-panel-head">
+                            <span class="panel-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                            <code>contact.yml</code>
+                            <span class="panel-format">YAML</span>
                         </div>
-                        <div class="text-sm-right contact-container animate">
-                            <h4 class="mt-4 contact-title" data-i18n="text-phone">My Phone Number</h4>
-                            <span class="mb-4 contact-info">+39 392 </span><span class="mb-4 contact-info">5281597</span>
+                        <div class="contact-line">
+                            <span class="contact-key" data-i18n="text-email">My Email</span>
+                            <a class="contact-value" href="mailto:albertobaroso999@gmail.com">albertobaroso999@gmail.com</a>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-key" data-i18n="text-phone">My Phone Number</span>
+                            <span class="contact-value"><span>+39 392 </span><span>5281597</span></span>
                         </div>
                     </div>
                 </div>
