@@ -19,12 +19,13 @@ function isSupported(locale) {
 // Load translations for the given locale and translate the page
 async function setLocale(newLocale) {
 
-    if (newLocale === activeLocale) return;
+    if (newLocale === activeLocale && Object.keys(translations).length) return;
 
     const newTranslations = await fetchTranslationsFor(newLocale);
     activeLocale = newLocale;
     translations = newTranslations;
     document.documentElement.lang = newLocale;
+    document.documentElement.classList.toggle("ita", newLocale === "it");
 
     // Swap flags
     const activeFlag = document.querySelector(`.country-flag[data-lang="${newLocale}"]`);
@@ -39,6 +40,7 @@ async function setLocale(newLocale) {
             const key = element.getAttribute("data-i18n");
             element.innerText = translations[key];
         });
+    document.dispatchEvent(new Event("localechange"));
 }
 
 // Retrieve translations from JSON file
